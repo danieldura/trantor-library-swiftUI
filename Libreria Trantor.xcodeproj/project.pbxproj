@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE2299BC6AE0061A5C3 /* Documentation.docc */; };
+		BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */; };
 		BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */; };
 		BBB6A22F2993FAB2005C0FF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */; };
 		BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */; };
 		BBB6A2342993FAB3005C0FF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2332993FAB3005C0FF4 /* Preview Assets.xcassets */; };
+		BBB6A23B2993FE38005C0FF4 /* booksData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A23A2993FE38005C0FF4 /* booksData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB424AE2299BC6AE0061A5C3 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libreria_TrantorApp.swift; sourceTree = "<group>"; };
 		BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBB6A2332993FAB3005C0FF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BBB6A23A2993FE38005C0FF4 /* booksData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = booksData.json; path = "Libreria Trantor/Resources/booksData.json"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB424AE4299BC93D0061A5C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB424AE5299BC94A0061A5C3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BB424AE6299BC95D0061A5C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB424AE8299BDFB40061A5C3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		BBB6A2202993FAB2005C0FF4 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +86,15 @@
 		BBB6A22B2993FAB2005C0FF4 /* Libreria Trantor */ = {
 			isa = PBXGroup;
 			children = (
-				BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */,
+				BB424AE8299BDFB40061A5C3 /* Network */,
+				BB424AE6299BC95D0061A5C3 /* Models */,
+				BB424AE5299BC94A0061A5C3 /* ViewModels */,
+				BB424AE4299BC93D0061A5C3 /* Views */,
+				BBB6A23D2993FE65005C0FF4 /* System */,
+				BBB6A23C2993FE58005C0FF4 /* Resources */,
 				BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */,
-				BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */,
 				BBB6A2322993FAB3005C0FF4 /* Preview Content */,
+				BB424AE2299BC6AE0061A5C3 /* Documentation.docc */,
 			);
 			path = "Libreria Trantor";
 			sourceTree = "<group>";
@@ -65,6 +105,23 @@
 				BBB6A2332993FAB3005C0FF4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BBB6A23C2993FE58005C0FF4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BBB6A23A2993FE38005C0FF4 /* booksData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BBB6A23D2993FE65005C0FF4 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */,
+				BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +184,7 @@
 			files = (
 				BBB6A2342993FAB3005C0FF4 /* Preview Assets.xcassets in Resources */,
 				BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */,
+				BBB6A23B2993FE38005C0FF4 /* booksData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
 				BBB6A22F2993FAB2005C0FF4 /* ContentView.swift in Sources */,
+				BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */,
 				BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
