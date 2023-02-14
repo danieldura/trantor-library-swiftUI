@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Libreria Trantor
+
+  Created by Dani Durà on 14/2/23.
+  
+*/
+
+"" = "";
+"NoInternetTitle" = "No Network Connection";
+"NoInternetDescription" = "App requires internet connection to work.";
