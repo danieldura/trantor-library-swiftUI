@@ -5,3 +5,14 @@
   Created by Dani Durà on 14/2/23.
   
 */
+
+"" = "";
+"NoInternetTitle" = "No Network Connection";
+"NoInternetDescription" = "App requires internet connection to work.";
+"connection_error" = "Error de conexión";
+"response_error" = "Error de respuesta";
+"encoding_error" = "Error de codificación";
+"authentication_error" = "Error de autenticación";
+"timeout_error" = "Error de tiempo de espera";
+"url_error" = "Error de URL";
+
