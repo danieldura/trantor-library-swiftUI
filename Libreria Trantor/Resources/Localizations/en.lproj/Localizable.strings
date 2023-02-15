@@ -15,3 +15,4 @@
 "authentication_error" = "Authentication Error";
 "timeout_error" = "Timeout Error";
 "url_error" = "URL Error";
+"Server Status Error: %@" = "Server Status Error: %@";

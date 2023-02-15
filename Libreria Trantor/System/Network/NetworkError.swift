@@ -14,6 +14,7 @@ enum NetworkError: Error {
     case authenticationError
     case timeoutError
     case URLError
+    case status(Int)
     case general(Error)
     
     var description: String {
@@ -30,6 +31,8 @@ enum NetworkError: Error {
             return "timeout_error".localized
         case .URLError:
             return "url_error".localized
+        case .status(let int):
+            return "Server Status Error: %@".localized(with: int)
         case let .general(error):
             return "Error de construcción \(error)"
         }
