@@ -14,6 +14,10 @@
 		BB424AFF299BF1C20061A5C3 /* localizable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AFE299BF1C20061A5C3 /* localizable+extension.swift */; };
 		BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424B01299CD9A60061A5C3 /* NetworkError.swift */; };
 		BB424B06299CE1AA0061A5C3 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424B05299CE1AA0061A5C3 /* NetworkClient.swift */; };
+		BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424B07299CF1450061A5C3 /* BookModel.swift */; };
+		BB424B0A299CF4A10061A5C3 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424B09299CF4A10061A5C3 /* AuthorModel.swift */; };
+		BB424B0E299CF5760061A5C3 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424B0D299CF5760061A5C3 /* ClientModel.swift */; };
+		BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424B0F299CFCB60061A5C3 /* OrderModel.swift */; };
 		BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */; };
 		BBB6A22F2993FAB2005C0FF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */; };
 		BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */; };
@@ -32,6 +36,10 @@
 		BB424B00299BF3940061A5C3 /* Libreria-Trantor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Libreria-Trantor-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BB424B01299CD9A60061A5C3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BB424B05299CE1AA0061A5C3 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		BB424B07299CF1450061A5C3 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		BB424B09299CF4A10061A5C3 /* AuthorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
+		BB424B0D299CF5760061A5C3 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		BB424B0F299CFCB60061A5C3 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libreria_TrantorApp.swift; sourceTree = "<group>"; };
 		BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +77,10 @@
 		BB424AE6299BC95D0061A5C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BB424B07299CF1450061A5C3 /* BookModel.swift */,
+				BB424B09299CF4A10061A5C3 /* AuthorModel.swift */,
+				BB424B0D299CF5760061A5C3 /* ClientModel.swift */,
+				BB424B0F299CFCB60061A5C3 /* OrderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,11 +245,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB424B0E299CF5760061A5C3 /* ClientModel.swift in Sources */,
 				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
 				BBB6A22F2993FAB2005C0FF4 /* ContentView.swift in Sources */,
+				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
+				BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */,
 				BB424AFF299BF1C20061A5C3 /* localizable+extension.swift in Sources */,
 				BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */,
+				BB424B0A299CF4A10061A5C3 /* AuthorModel.swift in Sources */,
 				BB424AED299BEF9F0061A5C3 /* AppOfflineView.swift in Sources */,
 				BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */,
 				BB424B06299CE1AA0061A5C3 /* NetworkClient.swift in Sources */,
