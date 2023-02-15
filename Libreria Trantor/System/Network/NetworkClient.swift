@@ -9,7 +9,6 @@ import Foundation
 
 final class NetworkClient {
     func fetch<T:Decodable>(request:URLRequest) async throws -> T {
-        
         do {
             let (data,response) = try await URLSession.shared.data(for: request)
             guard let httpResponse = response as? HTTPURLResponse else { throw NetworkError.responseError}
