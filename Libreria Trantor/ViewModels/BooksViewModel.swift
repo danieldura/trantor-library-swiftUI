@@ -25,9 +25,13 @@ final class BooksViewModel: ObservableObject {
     }
     
     init() {
-        books = persistence.fetchBooks()
         authors = persistence.fetchAuthors()
+        books = persistence.fetchBooks()
     }
     
+    func fetchAuthorName(from book: BookModel) -> String? {
+        authors.first(where: {$0.id == book.author})?.name
+    }
+
     
 }

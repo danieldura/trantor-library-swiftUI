@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct Libreria_TrantorApp: App {
+    @StateObject var booksVM = BooksViewModel()
     @StateObject var monitorNetwork = NetworkStatus()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
@@ -17,6 +18,7 @@ struct Libreria_TrantorApp: App {
         WindowGroup {
             ContentView(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.blue]),content: {
                 AppTabView()
+                    .environmentObject(booksVM)
             })
                 .overlay {
                     if monitorNetwork.status == .offline {

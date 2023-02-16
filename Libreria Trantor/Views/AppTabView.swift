@@ -10,15 +10,10 @@ import SwiftUI
 struct AppTabView: View {
     var body: some View {
         TabView {
-            NavigationStack {
-                
-            }
+
         }
         .tabItem {
             Label("Books".localized, systemImage: "atom")
-        }
-        NavigationStack {
-            
         }
         .tabItem{
             Label("Favorites".localized,systemImage: "star")
