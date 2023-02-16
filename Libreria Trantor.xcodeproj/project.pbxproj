@@ -29,7 +29,18 @@
 		BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D5299E42C6006219CD /* ModelPersistence.swift */; };
 		BBC193DA299E4948006219CD /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D9299E4948006219CD /* BooksViewModel.swift */; };
 		BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193DB299E4CC1006219CD /* AppDelegate.swift */; };
+		BBC193E5299E54E1006219CD /* LibreriaTrantorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBC193E6299E54E1006219CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB6A2212993FAB2005C0FF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBB6A2282993FAB2005C0FF4;
+			remoteInfo = "Libreria Trantor";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BB424AE2299BC6AE0061A5C3 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
@@ -58,10 +69,20 @@
 		BBC193D5299E42C6006219CD /* ModelPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPersistence.swift; sourceTree = "<group>"; };
 		BBC193D9299E4948006219CD /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		BBC193DB299E4CC1006219CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibreriaTrantorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreriaTrantorTests.swift; sourceTree = "<group>"; };
+		BBC193EB299E5870006219CD /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BBB6A2262993FAB2005C0FF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC193DF299E54E1006219CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,6 +154,7 @@
 			children = (
 				BB424AE2299BC6AE0061A5C3 /* Documentation.docc */,
 				BBB6A22B2993FAB2005C0FF4 /* Libreria Trantor */,
+				BBC193E3299E54E1006219CD /* LibreriaTrantorTests */,
 				BBB6A22A2993FAB2005C0FF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */,
+				BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +220,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		BBC193E3299E54E1006219CD /* LibreriaTrantorTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBC193EB299E5870006219CD /* TestPlan.xctestplan */,
+				BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */,
+			);
+			path = LibreriaTrantorTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +249,24 @@
 			productReference = BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BBC193E1299E54E1006219CD /* LibreriaTrantorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBC193E8299E54E1006219CD /* Build configuration list for PBXNativeTarget "LibreriaTrantorTests" */;
+			buildPhases = (
+				BBC193DE299E54E1006219CD /* Sources */,
+				BBC193DF299E54E1006219CD /* Frameworks */,
+				BBC193E0299E54E1006219CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBC193E7299E54E1006219CD /* PBXTargetDependency */,
+			);
+			name = LibreriaTrantorTests;
+			productName = LibreriaTrantorTests;
+			productReference = BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,6 +279,10 @@
 				TargetAttributes = {
 					BBB6A2282993FAB2005C0FF4 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					BBC193E1299E54E1006219CD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BBB6A2282993FAB2005C0FF4;
 					};
 				};
 			};
@@ -248,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				BBB6A2282993FAB2005C0FF4 /* Libreria Trantor */,
+				BBC193E1299E54E1006219CD /* LibreriaTrantorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +317,13 @@
 				BB424AF1299BF0370061A5C3 /* Localizable.strings in Resources */,
 				BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */,
 				BBB6A23B2993FE38005C0FF4 /* BooksData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC193E0299E54E1006219CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +354,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BBC193DE299E54E1006219CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBC193E5299E54E1006219CD /* LibreriaTrantorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBC193E7299E54E1006219CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBB6A2282993FAB2005C0FF4 /* Libreria Trantor */;
+			targetProxy = BBC193E6299E54E1006219CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BB424AF3299BF0370061A5C3 /* Localizable.strings */ = {
@@ -442,6 +520,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +550,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,6 +561,44 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBC193E9299E54E1006219CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BV32R4D4MU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ddura.LibreriaTrantorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Libreria Trantor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Libreria Trantor";
+			};
+			name = Debug;
+		};
+		BBC193EA299E54E1006219CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BV32R4D4MU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ddura.LibreriaTrantorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Libreria Trantor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Libreria Trantor";
 			};
 			name = Release;
 		};
@@ -501,6 +619,15 @@
 			buildConfigurations = (
 				BBB6A2382993FAB3005C0FF4 /* Debug */,
 				BBB6A2392993FAB3005C0FF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBC193E8299E54E1006219CD /* Build configuration list for PBXNativeTarget "LibreriaTrantorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC193E9299E54E1006219CD /* Debug */,
+				BBC193EA299E54E1006219CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Books = [BookModel]
+
 struct BookModel: Codable, Identifiable, Hashable {
     let isbn:String?
     let plot: String?

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "03B6FF02-8781-45F8-9CDD-982EA7D50567",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Libreria Trantor.xcodeproj",
+        "identifier" : "BBC193E1299E54E1006219CD",
+        "name" : "LibreriaTrantorTests"
+      }
+    }
+  ],
+  "version" : 1
+}

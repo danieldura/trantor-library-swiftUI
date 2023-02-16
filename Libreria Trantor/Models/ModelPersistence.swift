@@ -13,12 +13,22 @@ extension URL {
 }
 
 final class ModelPersistence {
-    func fetchBooks(url: URL = .booksDataURL) -> [BookModel] {
+    func fetchBooks(url: URL = .booksDataURL) -> Books {
         do {
             let data = try Data(contentsOf: url)
-            return try JSONDecoder().decode([BookModel].self, from: data)
+            return try JSONDecoder().decode(Books.self, from: data)
         } catch {
             
+            print("Error on load \(error)")
+            return []
+        }
+    }
+    
+    func fetchAuthors(url: URL = .authorDataUrl) -> Authors {
+        do {
+            let data = try Data(contentsOf: url)
+            return try JSONDecoder().decode(Authors.self, from: data)
+        } catch {
             print("Error on load \(error)")
             return []
         }

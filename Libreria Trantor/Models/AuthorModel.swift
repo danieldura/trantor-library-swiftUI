@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Authors = [AuthorModel]
+
 struct AuthorModel: Codable, Identifiable, Hashable {
     let id:UUID
     let name:String?
