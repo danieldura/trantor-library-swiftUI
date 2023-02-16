@@ -21,7 +21,12 @@ final class LibreriaTrantorTests: XCTestCase {
 
     func testLoadBooks() throws {
         let books = persistence.fetchBooks()
-        XCTAssertEqual(books.count, 900)
+        XCTAssertEqual(books.count, 970)
+    }
+    
+    func testFetchAuthors() throws {
+        let authors = persistence.fetchAuthors()
+        XCTAssertEqual(authors.count, 293)
     }
 
     func testPerformanceExample() throws {
