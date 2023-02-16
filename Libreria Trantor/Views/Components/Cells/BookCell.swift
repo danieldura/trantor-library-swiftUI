@@ -9,13 +9,16 @@ import SwiftUI
 
 struct BookCell: View {
     let book:BookModel
+    let authorName:String?
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(book.title)
                     .font(.headline)
-                Text("Nombre de autor")
+                if let authorName = authorName {
+                    Text(authorName)
+                }
                 HStack{
                     Text("\(book.year)")
                     Spacer()
@@ -31,13 +34,13 @@ struct BookCell: View {
                     .background {
                         Color.gray.opacity(0.2)
                     }
-                    .clipShape(Circle())
+//                    .clipShape(Circle())
                 
             } placeholder: {
                 Image(systemName: "book.circle.fill")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 50)
+                    .frame(width: 70)
             }
         }
     }
@@ -45,6 +48,6 @@ struct BookCell: View {
 
 struct BookCell_Previews: PreviewProvider {
     static var previews: some View {
-        BookCell(book: .test)
+        BookCell(book: .test,authorName: "Hello")
     }
 }

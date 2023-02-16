@@ -10,20 +10,21 @@ import SwiftUI
 struct AppTabView: View {
     var body: some View {
         TabView {
-
+            ListBooksView()
+            .tabItem {
+                Label("Books".localized, systemImage: "atom")
+            }
+            FavoriteBooksListView()
+            .tabItem{
+                Label("Favorites".localized,systemImage: "star")
+            }
         }
-        .tabItem {
-            Label("Books".localized, systemImage: "atom")
-        }
-        .tabItem{
-            Label("Favorites".localized,systemImage: "star")
-        }
-        
     }
 }
 
 struct AppTabView_Previews: PreviewProvider {
     static var previews: some View {
         AppTabView()
+            .environmentObject(BooksViewModel())
     }
 }

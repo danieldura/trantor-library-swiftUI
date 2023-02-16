@@ -16,10 +16,10 @@ struct Libreria_TrantorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.blue]),content: {
+//            ContentView(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.blue]),content: {
                 AppTabView()
                     .environmentObject(booksVM)
-            })
+//            })
                 .overlay {
                     if monitorNetwork.status == .offline {
                         AppOfflineView()

@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ListBooksView: View {
-    @EnvironmentObject var booksVM:BooksViewModel
+    @EnvironmentObject var vm:BooksViewModel
     
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(vm.books) { book in
+                NavigationLink(value:book) {
+                    BookCell(book: book,authorName: vm.fetchAuthorName(from: book))
+                }
+                .buttonStyle(.borderedProminent)
+            }
+        }
     }
 }
 
 struct ListBooksView_Previews: PreviewProvider {
+    static let vm = BooksViewModel()
     static var previews: some View {
         ListBooksView()
+            .environmentObject(vm)
     }
 }
