@@ -24,6 +24,7 @@
 		BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */; };
 		BBB6A2342993FAB3005C0FF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2332993FAB3005C0FF4 /* Preview Assets.xcassets */; };
 		BBB6A23B2993FE38005C0FF4 /* booksData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A23A2993FE38005C0FF4 /* booksData.json */; };
+		BBC193D1299E2909006219CD /* OffsetObservingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D0299E2909006219CD /* OffsetObservingScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBB6A2332993FAB3005C0FF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBB6A23A2993FE38005C0FF4 /* booksData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = booksData.json; path = "Libreria Trantor/Resources/booksData.json"; sourceTree = SOURCE_ROOT; };
+		BBC193D0299E2909006219CD /* OffsetObservingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetObservingScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */,
+				BBC193D0299E2909006219CD /* OffsetObservingScrollView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				BBB6A22F2993FAB2005C0FF4 /* ContentView.swift in Sources */,
 				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
 				BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */,
+				BBC193D1299E2909006219CD /* OffsetObservingScrollView.swift in Sources */,
 				BB424AFF299BF1C20061A5C3 /* localizable+extension.swift in Sources */,
 				BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */,
 				BB424B0A299CF4A10061A5C3 /* AuthorModel.swift in Sources */,
