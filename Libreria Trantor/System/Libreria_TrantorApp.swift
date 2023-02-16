@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct Libreria_TrantorApp: App {
     @StateObject var monitorNetwork = NetworkStatus()
-    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     
     var body: some Scene {
