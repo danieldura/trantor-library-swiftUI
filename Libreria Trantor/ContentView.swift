@@ -12,7 +12,7 @@ struct ContentView<Content:View>: View {
     var headerGradient: Gradient
     @ViewBuilder var content: () -> Content
     
-    private let headerHeight = (collapsed: 50.0, expanded:70.0)
+    private let headerHeight = (collapsed: 50.0, expanded:150.0)
     @State private var scrollOffset = CGPoint()
     
     var body: some View {
@@ -68,7 +68,7 @@ private extension ContentView {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(title: "Dani Durà", headerGradient: Gradient(colors: [.red,.black]), content: {
+        ContentView(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.secondary]), content: {
             AppTabView()
         })
     }

@@ -12,6 +12,7 @@ struct Libreria_TrantorApp: App {
     @StateObject var monitorNetwork = NetworkStatus()
     
     
+    
     var body: some Scene {
         WindowGroup {
             ContentView(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.blue]),content: {
