@@ -18,7 +18,11 @@ final class BooksViewModel: ObservableObject {
     
     @Published var searchText:String = ""
     @Published var books: Books
-    @Published var latestBooks: Books
+    @Published var suggestedBooks: Books
+    @Published var searchedBooks: Books
+    
+    
+    var latestBooks: Books
     
     var authors: Authors
     
@@ -30,6 +34,8 @@ final class BooksViewModel: ObservableObject {
         authors = persistence.fetchAuthors()
         books = persistence.fetchBooks()
         latestBooks = persistence.fetchBooks(url: .latestBooksDataURL)
+        suggestedBooks = latestBooks.shuffled().suffix(3)
+        searchedBooks = latestBooks.shuffled().suffix(3)
     }
     
     func fetchAuthorName(from book: BookModel) -> String? {

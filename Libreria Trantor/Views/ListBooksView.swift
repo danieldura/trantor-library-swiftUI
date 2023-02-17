@@ -18,9 +18,11 @@ struct ListBooksView: View {
                     BookCell(book: book,authorName: vm.fetchAuthorName(from: book))
                 }
 //                .buttonStyle(.borderedProminent)
+//                .buttonBorderShape(.roundedRectangle(radius: 25))
+//                .buttonStyle(.borderless)
             }
             .navigationTitle("Books".localized)
-            .searchable(text: $vm.searchText, tokens: $vm.latestBooks, suggestedTokens: $vm.latestBooks, placement: .automatic, prompt: "Search Book".localized) { token in
+            .searchable(text: $vm.searchText, tokens: $vm.searchedBooks, suggestedTokens: $vm.suggestedBooks, placement: .automatic, prompt: "Search Book".localized) { token in
                 Text(token.title)
             }
         }
