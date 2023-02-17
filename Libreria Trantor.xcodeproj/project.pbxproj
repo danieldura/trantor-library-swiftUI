@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1B92D8299F9892005C3BD4 /* LatestBooksData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1B92D7299F9892005C3BD4 /* LatestBooksData.json */; };
 		BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE2299BC6AE0061A5C3 /* Documentation.docc */; };
 		BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */; };
 		BB424AED299BEF9F0061A5C3 /* AppOfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1B92D7299F9892005C3BD4 /* LatestBooksData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LatestBooksData.json; sourceTree = "<group>"; };
 		BB424AE2299BC6AE0061A5C3 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOfflineView.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		BBC193D2299E4244006219CD /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BB1B92D7299F9892005C3BD4 /* LatestBooksData.json */,
 				BBC193D3299E425C006219CD /* AuthorsData.json */,
 				BBB6A23A2993FE38005C0FF4 /* BooksData.json */,
 			);
@@ -348,6 +351,7 @@
 				BB424AF1299BF0370061A5C3 /* Localizable.strings in Resources */,
 				BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */,
 				BBB6A23B2993FE38005C0FF4 /* BooksData.json in Resources */,
+				BB1B92D8299F9892005C3BD4 /* LatestBooksData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

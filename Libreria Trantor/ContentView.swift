@@ -69,7 +69,7 @@ private extension ContentView {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.secondary]), content: {
-            AppTabView()
+//            AppTabView()
         })
     }
 }
