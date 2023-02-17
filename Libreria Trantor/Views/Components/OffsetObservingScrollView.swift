@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-
-
-
-
 struct OffsetObservingScrollView<Content: View>: View {
     var axes: Axis.Set = [.vertical]
     var showsInficators = true

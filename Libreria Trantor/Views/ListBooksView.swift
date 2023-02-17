@@ -23,7 +23,14 @@ struct ListBooksView: View {
             }
             .navigationTitle("Books".localized)
             .searchable(text: $vm.searchText, tokens: $vm.searchedBooks, suggestedTokens: $vm.suggestedBooks, placement: .automatic, prompt: "Search Book".localized) { token in
-                Text(token.title)
+                NavigationLink {
+                    BookDetailView(vm: BookDetailViewModel(book: token))
+                } label: {
+                    Text(token.title)
+                }                
+            }
+            .navigationDestination(for: BookModel.self) { book in
+                BookDetailView(vm: BookDetailViewModel(book: book))
             }
         }
     }
