@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView<Content:View>: View {
+struct ScrollViewDDura<Content:View>: View {
     var title: String
     var headerGradient: Gradient
     @ViewBuilder var content: () -> Content
@@ -36,7 +36,7 @@ struct ContentView<Content:View>: View {
 }
 
 
-private extension ContentView {
+private extension ScrollViewDDura {
     var collapsedHeaderOpacity: CGFloat {
         let minOpacityOffset = headerHeight.expanded / 2
         let maxOpacityOffset = headerHeight.expanded - headerHeight.collapsed
@@ -68,8 +68,8 @@ private extension ContentView {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.secondary]), content: {
-//            AppTabView()
+        ScrollViewDDura(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.secondary]), content: {
+                
         })
     }
 }

@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct BookDetailView: View {
+    
+    @ObservedObject var vm:BookDetailViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
     }
 }
 
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailView()
+        BookDetailView(vm:BookDetailViewModel(book: .test))
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB1B92D8299F9892005C3BD4 /* LatestBooksData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1B92D7299F9892005C3BD4 /* LatestBooksData.json */; };
+		BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */; };
 		BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE2299BC6AE0061A5C3 /* Documentation.docc */; };
 		BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */; };
 		BB424AED299BEF9F0061A5C3 /* AppOfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */; };
@@ -26,7 +27,7 @@
 		BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BA607299E78EA007095C6 /* BookDetailView.swift */; };
 		BB4BA60B299E7B1A007095C6 /* FavoriteBooksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BA60A299E7B1A007095C6 /* FavoriteBooksListView.swift */; };
 		BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */; };
-		BBB6A22F2993FAB2005C0FF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */; };
+		BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */; };
 		BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */; };
 		BBB6A2342993FAB3005C0FF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2332993FAB3005C0FF4 /* Preview Assets.xcassets */; };
 		BBB6A23B2993FE38005C0FF4 /* BooksData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A23A2993FE38005C0FF4 /* BooksData.json */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		BB1B92D7299F9892005C3BD4 /* LatestBooksData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LatestBooksData.json; sourceTree = "<group>"; };
+		BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		BB424AE2299BC6AE0061A5C3 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOfflineView.swift; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 		BB4BA60A299E7B1A007095C6 /* FavoriteBooksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksListView.swift; sourceTree = "<group>"; };
 		BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libreria_TrantorApp.swift; sourceTree = "<group>"; };
-		BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDDura.swift; sourceTree = "<group>"; };
 		BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBB6A2332993FAB3005C0FF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBB6A23A2993FE38005C0FF4 /* BooksData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BooksData.json; path = "Libreria Trantor/Resources/Data/BooksData.json"; sourceTree = SOURCE_ROOT; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC193D9299E4948006219CD /* BooksViewModel.swift */,
+				BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,7 +212,7 @@
 				BB424AE4299BC93D0061A5C3 /* Views */,
 				BBB6A23D2993FE65005C0FF4 /* System */,
 				BBB6A23C2993FE58005C0FF4 /* Resources */,
-				BBB6A22E2993FAB2005C0FF4 /* ContentView.swift */,
+				BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */,
 				BBB6A2322993FAB3005C0FF4 /* Preview Content */,
 			);
 			path = "Libreria Trantor";
@@ -374,7 +377,7 @@
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
 				BB4BA60B299E7B1A007095C6 /* FavoriteBooksListView.swift in Sources */,
 				BB4BA606299E651A007095C6 /* RatingView.swift in Sources */,
-				BBB6A22F2993FAB2005C0FF4 /* ContentView.swift in Sources */,
+				BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */,
 				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
 				BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */,
 				BB4BA604299E5D50007095C6 /* BookCell.swift in Sources */,
@@ -382,6 +385,7 @@
 				BBC193D1299E2909006219CD /* OffsetObservingScrollView.swift in Sources */,
 				BB424AFF299BF1C20061A5C3 /* localizable+extension.swift in Sources */,
 				BBC193DA299E4948006219CD /* BooksViewModel.swift in Sources */,
+				BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */,
 				BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */,
 				BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */,
 				BB424B0A299CF4A10061A5C3 /* AuthorModel.swift in Sources */,
