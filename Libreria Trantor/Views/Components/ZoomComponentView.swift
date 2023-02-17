@@ -23,11 +23,18 @@ struct ZoomComponentView<Content: View>: View {
             .offset(offset)
             .scaleEffect(pinch)
             .rotationEffect(rotation)
+            .overlay {
+                Image(systemName:touched ? "heart.fill" : "")
+                    .font(.system(size: 50))
+                    .foregroundColor(touched ? .red : .gray)
+                    .padding()
+            }
             .onTapGesture(count: 2) {
                 withAnimation(.easeOut(duration: 1)) {
                     touched.toggle()
                 }
             }
+
             .gesture(
                 DragGesture()
                     .onChanged { value in

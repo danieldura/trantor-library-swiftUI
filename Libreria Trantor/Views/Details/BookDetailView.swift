@@ -31,7 +31,7 @@ struct BookDetailView: View {
                 LongTextComponentView(longText: vm.book.plot ?? "")
             }
         }
-        .padding()
+        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         .navigationTitle("\(vm.book.title)")
     }
 }
