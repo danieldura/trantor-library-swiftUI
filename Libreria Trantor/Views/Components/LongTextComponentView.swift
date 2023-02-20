@@ -13,21 +13,32 @@ struct LongTextComponentView: View {
     var longText = "Texto largo aquí ..."
     
     var body: some View {
-        Text(longText)
-            .font(.body)
-            .lineLimit(isScaled ? nil : 3)
-            .scaleEffect(isScaled ? gestureScale : 1)
-            .gesture(
-                LongPressGesture(minimumDuration: 0.5)
-                    .updating($gestureScale) { currentState, gestureState, transaction  in
-//                        gestureState = currentState.
-                    }
-                    .onEnded { _ in
-                        withAnimation {
-                            isScaled.toggle()
+        VStack (spacing:0){
+            Text(longText)
+                .font(.body)
+                .lineLimit(isScaled ? nil : 3)
+                .scaleEffect(isScaled ? gestureScale : 1)
+                .gesture(
+                    LongPressGesture(minimumDuration: 0.5)
+                        .updating($gestureScale) { currentState, gestureState, transaction  in
                         }
-                    }
+                        .onEnded { _ in
+                            withAnimation {
+                                isScaled.toggle()
+                            }
+                        }
             )
+            Button {
+                withAnimation {
+                    isScaled.toggle()
+                }
+                
+            } label: {
+                Label(isScaled ? "Leer menos".localized: "Leer más".localized, systemImage: isScaled ? "minus.circle" : "plus.circle")
+            }
+        }
+        
+
     }
 }
 
