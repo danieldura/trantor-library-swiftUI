@@ -18,16 +18,7 @@ struct LongTextComponentView: View {
                 .font(.body)
                 .lineLimit(isScaled ? nil : 3)
                 .scaleEffect(isScaled ? gestureScale : 1)
-                .gesture(
-                    LongPressGesture(minimumDuration: 0.5)
-                        .updating($gestureScale) { currentState, gestureState, transaction  in
-                        }
-                        .onEnded { _ in
-                            withAnimation {
-                                isScaled.toggle()
-                            }
-                        }
-            )
+                .textSelection(.enabled)
             Button {
                 withAnimation {
                     isScaled.toggle()
@@ -36,6 +27,7 @@ struct LongTextComponentView: View {
             } label: {
                 Label(isScaled ? "Leer menos".localized: "Leer más".localized, systemImage: isScaled ? "minus.circle" : "plus.circle")
             }
+            .padding(.top,8)
         }
         
 

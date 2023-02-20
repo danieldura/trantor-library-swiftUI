@@ -24,13 +24,14 @@ struct ZoomComponentView<Content: View>: View {
             .scaleEffect(pinch)
             .rotationEffect(rotation)
             .overlay {
-                Image(systemName:touched ? "heart.fill" : "")
+                Image(systemName:touched ? "heart.fill" : "heart")
                     .font(.system(size: 50))
                     .foregroundColor(touched ? .red : .gray)
                     .padding()
             }
             .onTapGesture(count: 2) {
                 withAnimation(.easeOut(duration: 1)) {
+                    
                     touched.toggle()
                 }
             }
@@ -58,6 +59,7 @@ struct ZoomComponentView<Content: View>: View {
                         }
                     )
             )
+            .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 10)
     }
 }
 
