@@ -27,6 +27,13 @@ struct BookModel: Codable, Identifiable, Hashable {
         
     }
     #endif
+    
+    func drawRating() -> String {
+        guard let drawRating = rating else {
+           return ""
+        }
+        return drawRating.formatted(.number.precision(.fractionLength(2)))
+    }
 }
 
 

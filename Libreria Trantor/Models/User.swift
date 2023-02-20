@@ -10,19 +10,20 @@ import Foundation
 struct User: Codable, Hashable, Identifiable {
     let id: Int
     let email:String
-    let role:String
+    var role:UserRole? = .client
     let location:String?
     let name:String?
     let favoriteBooks: Books?
     let readBooks: Books?
+    let orderedBooks: Books?
     
     static var test:User {
-        User(id: 1, email: "hola@ddura.es", role: "admin", location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test])
+        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test])
     }
     
-    enum userRoleEnum {
-        case admin
-        case client
+    enum UserRole:String, CaseIterable, Codable {
+        case admin = "admin"
+        case client = "client"
     }
 }
 
