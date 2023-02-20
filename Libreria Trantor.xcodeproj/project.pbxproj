@@ -12,6 +12,8 @@
 		BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */; };
 		BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */; };
 		BB3B649D29A3908F005D41CF /* ExpandableComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */; };
+		BB3B64A029A3B916005D41CF /* EnvironmentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B649F29A3B916005D41CF /* EnvironmentFormatter.swift */; };
+		BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B64A229A3C70B005D41CF /* String+Extension.swift */; };
 		BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE2299BC6AE0061A5C3 /* Documentation.docc */; };
 		BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */; };
 		BB424AED299BEF9F0061A5C3 /* AppOfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */; };
@@ -58,6 +60,8 @@
 		BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextComponentView.swift; sourceTree = "<group>"; };
 		BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomComponentView.swift; sourceTree = "<group>"; };
 		BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableComponentView.swift; sourceTree = "<group>"; };
+		BB3B649F29A3B916005D41CF /* EnvironmentFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentFormatter.swift; sourceTree = "<group>"; };
+		BB3B64A229A3C70B005D41CF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BB424AE2299BC6AE0061A5C3 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
 		BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOfflineView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB3B649E29A3B8FA005D41CF /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				BB3B649F29A3B916005D41CF /* EnvironmentFormatter.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		BB3B64A129A3C6FA005D41CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB3B64A229A3C70B005D41CF /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BB424AE4299BC93D0061A5C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +267,8 @@
 		BBB6A23D2993FE65005C0FF4 /* System */ = {
 			isa = PBXGroup;
 			children = (
+				BB3B64A129A3C6FA005D41CF /* Extensions */,
+				BB3B649E29A3B8FA005D41CF /* Environment */,
 				BB424AE8299BDFB40061A5C3 /* Network */,
 				BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */,
 				BB424B00299BF3940061A5C3 /* Libreria-Trantor-Info.plist */,
@@ -389,6 +411,7 @@
 				BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */,
 				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
 				BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */,
+				BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */,
 				BB4BA604299E5D50007095C6 /* BookCell.swift in Sources */,
 				BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */,
 				BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */,
@@ -401,6 +424,7 @@
 				BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */,
 				BB3B649D29A3908F005D41CF /* ExpandableComponentView.swift in Sources */,
 				BB424B0A299CF4A10061A5C3 /* AuthorModel.swift in Sources */,
+				BB3B64A029A3B916005D41CF /* EnvironmentFormatter.swift in Sources */,
 				BB424AED299BEF9F0061A5C3 /* AppOfflineView.swift in Sources */,
 				BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */,
 				BB424B12299D09680061A5C3 /* AppTabView.swift in Sources */,
