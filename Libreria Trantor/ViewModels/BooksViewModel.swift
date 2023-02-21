@@ -17,9 +17,10 @@ final class BooksViewModel: ObservableObject {
     var persistence = ModelPersistence()
     
     @Published var searchText:String = ""
-    @Published var books: Books
+    @Published private (set) var books: Books
     @Published var suggestedBooks: Books
     @Published var searchedBooks: Books
+    @Published private (set) var cartBooks: Books
     
     
     var latestBooks: Books
@@ -36,11 +37,21 @@ final class BooksViewModel: ObservableObject {
         latestBooks = persistence.fetchBooks(url: .latestBooksDataURL)
         suggestedBooks = latestBooks.shuffled().suffix(3)
         searchedBooks = latestBooks.shuffled().suffix(3)
+        cartBooks = []
     }
     
     func fetchAuthorName(from book: BookModel) -> String? {
         authors.first(where: {$0.id == book.author})?.name
     }
 
+    func addToCart(book:BookModel){
+        cartBooks.append(book)
+    }
+    func removeFromCart(book:BookModel){
+        cartBooks = cartBooks.filter { $0.id != book.id }
+    }
     
+    func makeOrder(){
+        
+    }
 }
