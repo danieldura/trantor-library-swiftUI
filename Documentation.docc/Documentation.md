@@ -8,6 +8,13 @@ we didn't have price on the backend, but how is a shoop book, or well, we can ma
 
 ## Topics
 
-### <!--@START_MENU_TOKEN@-->Group<!--@END_MENU_TOKEN@-->
+### Logic
+
+
+first view:
+- login with mail or create account
+-- download readed and ordered books (https://trantorapi-acacademy.herokuapp.com/api/client/reportBooksUser)
+-- download orders (https://trantorapi-acacademy.herokuapp.com/api/shop/orders)
+
 
 - <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->

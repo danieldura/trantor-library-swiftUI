@@ -17,9 +17,6 @@ struct ListBooksView: View {
                 NavigationLink(value:book) {
                     BookCell(book: book,authorName: vm.fetchAuthorName(from: book))
                 }
-//                .buttonStyle(.borderedProminent)
-//                .buttonBorderShape(.roundedRectangle(radius: 25))
-//                .buttonStyle(.borderless)
             }
             .navigationTitle("Books".localized)
             .searchable(text: $vm.searchText, tokens: $vm.searchedBooks, suggestedTokens: $vm.suggestedBooks, placement: .automatic, prompt: "Search Book".localized) { token in

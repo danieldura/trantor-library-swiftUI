@@ -23,5 +23,13 @@
 
 
 
-/* User */
+/* User View*/
 "Welcome %@" = "¡Welcome %@!";
+"Readed Books" = "Readed Books";
+
+"No books read yet?" = "";
+"Ordered Books" = "Ordered Books";
+"No ordered books?" = "No ordered books?";
+"Orders List" = "Orders List";
+"No orders" = "No orders";
+
