@@ -11,6 +11,8 @@
 		BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */; };
 		BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */; };
 		BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */; };
+		BB3A7D9329A4C8F3009714A3 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9229A4C8F3009714A3 /* UserView.swift */; };
+		BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */; };
 		BB3B649D29A3908F005D41CF /* ExpandableComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */; };
 		BB3B64A029A3B916005D41CF /* EnvironmentFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B649F29A3B916005D41CF /* EnvironmentFormatter.swift */; };
 		BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B64A229A3C70B005D41CF /* String+Extension.swift */; };
@@ -59,6 +61,8 @@
 		BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextComponentView.swift; sourceTree = "<group>"; };
 		BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomComponentView.swift; sourceTree = "<group>"; };
+		BB3A7D9229A4C8F3009714A3 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableComponentView.swift; sourceTree = "<group>"; };
 		BB3B649F29A3B916005D41CF /* EnvironmentFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentFormatter.swift; sourceTree = "<group>"; };
 		BB3B64A229A3C70B005D41CF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */,
 				BB4BA600299E5CC5007095C6 /* ListBooksView.swift */,
 				BB4BA60A299E7B1A007095C6 /* FavoriteBooksListView.swift */,
+				BB3A7D9229A4C8F3009714A3 /* UserView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			children = (
 				BBC193D9299E4948006219CD /* BooksViewModel.swift */,
 				BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */,
+				BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 				BB424B0E299CF5760061A5C3 /* User.swift in Sources */,
 				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
+				BB3A7D9329A4C8F3009714A3 /* UserView.swift in Sources */,
 				BB4BA60B299E7B1A007095C6 /* FavoriteBooksListView.swift in Sources */,
 				BB4BA606299E651A007095C6 /* RatingView.swift in Sources */,
 				BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */,
@@ -415,6 +422,7 @@
 				BB4BA604299E5D50007095C6 /* BookCell.swift in Sources */,
 				BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */,
 				BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */,
+				BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */,
 				BBC193D1299E2909006219CD /* OffsetObservingScrollView.swift in Sources */,
 				BB424AFF299BF1C20061A5C3 /* localizable+extension.swift in Sources */,
 				BBC193DA299E4948006219CD /* BooksViewModel.swift in Sources */,

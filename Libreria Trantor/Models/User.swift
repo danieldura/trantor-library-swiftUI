@@ -16,9 +16,10 @@ struct User: Codable, Hashable, Identifiable {
     let favoriteBooks: Books?
     let readBooks: Books?
     let orderedBooks: Books?
+    let orders:orders?
     
     static var test:User {
-        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test])
+        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test], orders: [.test])
     }
     
     enum UserRole:String, CaseIterable, Codable {

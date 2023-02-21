@@ -6,12 +6,14 @@
 //
 
 import Foundation
+typealias orders = [OrderModel]
 
-struct OrdelModel: Codable {
+struct OrderModel: Codable, Hashable, Identifiable {
+
     let id:UUID
     let state:String
     let email:String
-    let books:[BookModel]
+    let books:Books
     let date:Date
     
     
@@ -21,7 +23,7 @@ struct OrdelModel: Codable {
         case email, books, date
     }
     
-    static var test:OrdelModel {
-        OrdelModel(id: UUID(), state: "recibido", email: "hola@ddura.es", books: [BookModel.test], date: Date())
+    static var test:OrderModel {
+        OrderModel(id: UUID(), state: "recibido", email: "hola@ddura.es", books: [BookModel.test], date: Date())
     }
 }
