@@ -26,6 +26,13 @@ struct ListBooksView: View {
                     Text(token.title)
                 }                
             }
+            .toolbar {
+                NavigationLink {
+                    CartView()
+                } label: {
+                    CartButton(numberOfBooks: vm.cartBooks.count)
+                }
+            }
             .navigationDestination(for: BookModel.self) { book in
                 BookDetailView(vm: BookDetailViewModel(book: book))
             }

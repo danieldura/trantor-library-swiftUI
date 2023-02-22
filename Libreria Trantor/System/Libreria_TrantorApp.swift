@@ -16,17 +16,16 @@ struct Libreria_TrantorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            InfiniteLoopBugExampleView()
-//                AppTabView()
-//                    .environmentObject(booksVM)
-//
-//                .overlay {
-//                    if monitorNetwork.status == .offline {
-//                        AppOfflineView()
-//                            .transition(.opacity)
-//                    }
-//                }
-//                .animation(.default, value: monitorNetwork.status)
+                AppTabView()
+                    .environmentObject(booksVM)
+
+                .overlay {
+                    if monitorNetwork.status == .offline {
+                        AppOfflineView()
+                            .transition(.opacity)
+                    }
+                }
+                .animation(.default, value: monitorNetwork.status)
         }
         
     }
