@@ -21,6 +21,9 @@ final class BooksViewModel: ObservableObject {
     @Published var suggestedBooks: Books
     @Published var searchedBooks: Books
     @Published private (set) var cartBooks: Books
+    @Published private (set) var readBooks: Books
+    @Published private (set) var lovedBooks: Books
+    @Published var user:User
     
     
     var latestBooks: Books
@@ -38,6 +41,9 @@ final class BooksViewModel: ObservableObject {
         suggestedBooks = latestBooks.shuffled().suffix(3)
         searchedBooks = latestBooks.shuffled().suffix(3)
         cartBooks = []
+        readBooks = []
+        lovedBooks = []
+        user = User.test
     }
     
     func fetchAuthorName(from book: BookModel) -> String? {

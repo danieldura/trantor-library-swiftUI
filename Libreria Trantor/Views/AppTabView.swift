@@ -12,13 +12,17 @@ struct AppTabView: View {
         TabView {
             ListBooksView()
             .tabItem {
-                Label("Books".localized, systemImage: "atom")
+                Label("Books".localized, systemImage: "books.vertical")
             }
             ReadBooksListView()
                 .badge("!")
             .tabItem{
-                Label("Favorites".localized,systemImage: "star")
+                Label("Read".localized,systemImage: "star")
             }
+            AccountView()
+                .tabItem {
+                    Label("Account".localized,systemImage: "person")
+                }
         }
     }
 }

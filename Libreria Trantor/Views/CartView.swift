@@ -29,7 +29,13 @@ struct CartView: View {
                 ApplePayButtonComponentView(action: vm.makeOrder)
                     .padding()
             }else {
-                Text("Your order is empty.".localized)
+                VStack(spacing:10) {
+                    Text("Your order is empty.".localized)
+                        .font(.title)
+                    Text("Add favorite episodes by *swiping*\nto the right in the books list")
+                        .multilineTextAlignment(.center)
+                        .bold()
+                }                
             }
             
         }.navigationTitle(Text("My Order"))

@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct AccountView: View {
-    @ObservedObject var vm:UserViewModel
+    @EnvironmentObject var vm:BooksViewModel
     var body: some View {
-        VStack(alignment: .leading,spacing: 16) {
-            userInfo
-            readedBooks
-            orderedBooks
-            ordersList            
+        ScrollViewDDura(title: "My Account".localized, headerGradient: Gradient(colors:[.random,.random])) {
+            VStack(alignment: .leading,spacing: 16) {
+                userInfo
+                readedBooks
+                orderedBooks
+                ordersList
+            }
         }
-
     }
 }
 
@@ -71,6 +72,6 @@ extension AccountView {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView(vm:UserViewModel(user: .test))
+        AccountView().environmentObject(BooksViewModel())
     }
 }
