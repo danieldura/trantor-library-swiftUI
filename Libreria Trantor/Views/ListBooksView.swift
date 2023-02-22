@@ -10,7 +10,6 @@ import SwiftUI
 struct ListBooksView: View {
     @EnvironmentObject var vm:BooksViewModel
     
-    
     var body: some View {
         NavigationStack {
             List(vm.filteredBooks) { book in

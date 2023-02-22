@@ -13,6 +13,9 @@
 		BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */; };
 		BB34152329A60552007C0A65 /* InfiniteLoopBugExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */; };
 		BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152429A606ED007C0A65 /* Color+Extension.swift */; };
+		BB34152729A61601007C0A65 /* CartViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152629A61601007C0A65 /* CartViewRow.swift */; };
+		BB34152929A61C08007C0A65 /* ApplePayButtonComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152829A61C08007C0A65 /* ApplePayButtonComponentView.swift */; };
+		BB34152B29A62745007C0A65 /* ApplePayHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152A29A62745007C0A65 /* ApplePayHandler.swift */; };
 		BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9229A4C8F3009714A3 /* AccountView.swift */; };
 		BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */; };
 		BB3A7D9729A50CD9009714A3 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9629A50CD9009714A3 /* CartButton.swift */; };
@@ -67,6 +70,9 @@
 		BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomComponentView.swift; sourceTree = "<group>"; };
 		BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteLoopBugExampleView.swift; sourceTree = "<group>"; };
 		BB34152429A606ED007C0A65 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		BB34152629A61601007C0A65 /* CartViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewRow.swift; sourceTree = "<group>"; };
+		BB34152829A61C08007C0A65 /* ApplePayButtonComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayButtonComponentView.swift; sourceTree = "<group>"; };
+		BB34152A29A62745007C0A65 /* ApplePayHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHandler.swift; sourceTree = "<group>"; };
 		BB3A7D9229A4C8F3009714A3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BB3A7D9629A50CD9009714A3 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 				BB4BA602299E5D39007095C6 /* Cells */,
 				BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */,
 				BB3A7D9629A50CD9009714A3 /* CartButton.swift */,
+				BB34152829A61C08007C0A65 /* ApplePayButtonComponentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -228,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4BA603299E5D50007095C6 /* BookCell.swift */,
+				BB34152629A61601007C0A65 /* CartViewRow.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 				BB424B00299BF3940061A5C3 /* Libreria-Trantor-Info.plist */,
 				BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */,
 				BBC193DB299E4CC1006219CD /* AppDelegate.swift */,
+				BB34152A29A62745007C0A65 /* ApplePayHandler.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -429,13 +438,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB34152729A61601007C0A65 /* CartViewRow.swift in Sources */,
 				BB3A7D9729A50CD9009714A3 /* CartButton.swift in Sources */,
+				BB34152929A61C08007C0A65 /* ApplePayButtonComponentView.swift in Sources */,
 				BB424B0E299CF5760061A5C3 /* User.swift in Sources */,
 				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
 				BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */,
 				BB4BA60B299E7B1A007095C6 /* FavoriteBooksListView.swift in Sources */,
 				BB4BA606299E651A007095C6 /* RatingView.swift in Sources */,
+				BB34152B29A62745007C0A65 /* ApplePayHandler.swift in Sources */,
 				BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */,
 				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
 				BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */,
