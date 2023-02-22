@@ -20,9 +20,9 @@
             }
             
             @Step {
-                <#text#>
+                How to find which data change is causing a SwiftUI view to update
                 
-                @Code(name: "<#display name#>", file: <#filename.swift#>)
+                @Code(name: "How to find which data change is causing a SwiftUI view to update", file: InfitineLoopBugExampleView.swift)
             }
         }
     }
