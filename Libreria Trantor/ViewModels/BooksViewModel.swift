@@ -54,4 +54,7 @@ final class BooksViewModel: ObservableObject {
     func makeOrder(){
         
     }
+    func isBookInCart(_ book: BookModel) -> Bool {
+        cartBooks.contains(where: { $0 == book })
+    }
 }

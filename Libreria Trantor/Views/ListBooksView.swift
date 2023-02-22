@@ -16,6 +16,15 @@ struct ListBooksView: View {
                 NavigationLink(value:book) {
                     BookCell(book: book,authorName: vm.fetchAuthorName(from: book))
                 }
+                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                    Button {
+                        vm.addToCart(book: book)
+                    } label: {
+                        vm.isBookInCart(book) ?
+                        Image(systemName: "plus") : Image(systemName: "plus")
+                    }
+                    .tint(vm.isBookInCart(book) ? .gray : .green)
+                }
             }
             .navigationTitle("Books".localized)
             .searchable(text: $vm.searchText, tokens: $vm.searchedBooks, suggestedTokens: $vm.suggestedBooks, placement: .automatic, prompt: "Search Book".localized) { token in
