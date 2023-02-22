@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserView: View {
+struct AccountView: View {
     @ObservedObject var vm:UserViewModel
     var body: some View {
         VStack(alignment: .leading,spacing: 16) {
@@ -21,7 +21,7 @@ struct UserView: View {
 }
 
 
-extension UserView {
+extension AccountView {
     var readedBooks: some View {
         Group {
             if let books = vm.user.readBooks {
@@ -71,6 +71,6 @@ extension UserView {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView(vm:UserViewModel(user: .test))
+        AccountView(vm:UserViewModel(user: .test))
     }
 }

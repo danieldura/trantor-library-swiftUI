@@ -15,6 +15,7 @@ struct AppTabView: View {
                 Label("Books".localized, systemImage: "atom")
             }
             FavoriteBooksListView()
+                .badge("!")
             .tabItem{
                 Label("Favorites".localized,systemImage: "star")
             }

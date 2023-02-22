@@ -11,7 +11,8 @@
 		BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */; };
 		BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */; };
 		BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */; };
-		BB3A7D9329A4C8F3009714A3 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9229A4C8F3009714A3 /* UserView.swift */; };
+		BB34152329A60552007C0A65 /* InfiniteLoopBugExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */; };
+		BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9229A4C8F3009714A3 /* AccountView.swift */; };
 		BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */; };
 		BB3A7D9729A50CD9009714A3 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9629A50CD9009714A3 /* CartButton.swift */; };
 		BB3A7D9929A5149A009714A3 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9829A5149A009714A3 /* CartView.swift */; };
@@ -63,7 +64,8 @@
 		BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextComponentView.swift; sourceTree = "<group>"; };
 		BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomComponentView.swift; sourceTree = "<group>"; };
-		BB3A7D9229A4C8F3009714A3 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteLoopBugExampleView.swift; sourceTree = "<group>"; };
+		BB3A7D9229A4C8F3009714A3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BB3A7D9629A50CD9009714A3 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		BB3A7D9829A5149A009714A3 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB34152129A60510007C0A65 /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */,
+			);
+			path = Debugging;
+			sourceTree = "<group>";
+		};
 		BB3B649E29A3B8FA005D41CF /* Environment */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +159,7 @@
 				BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */,
 				BB4BA600299E5CC5007095C6 /* ListBooksView.swift */,
 				BB4BA60A299E7B1A007095C6 /* FavoriteBooksListView.swift */,
-				BB3A7D9229A4C8F3009714A3 /* UserView.swift */,
+				BB3A7D9229A4C8F3009714A3 /* AccountView.swift */,
 				BB3A7D9829A5149A009714A3 /* CartView.swift */,
 			);
 			path = Views;
@@ -270,6 +280,7 @@
 		BBB6A23C2993FE58005C0FF4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BB34152129A60510007C0A65 /* Debugging */,
 				BBC193D2299E4244006219CD /* Data */,
 				BB424AEE299BF00B0061A5C3 /* Localizations */,
 			);
@@ -419,7 +430,7 @@
 				BB424B0E299CF5760061A5C3 /* User.swift in Sources */,
 				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
-				BB3A7D9329A4C8F3009714A3 /* UserView.swift in Sources */,
+				BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */,
 				BB4BA60B299E7B1A007095C6 /* FavoriteBooksListView.swift in Sources */,
 				BB4BA606299E651A007095C6 /* RatingView.swift in Sources */,
 				BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */,
@@ -437,6 +448,7 @@
 				BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */,
 				BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */,
 				BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */,
+				BB34152329A60552007C0A65 /* InfiniteLoopBugExampleView.swift in Sources */,
 				BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */,
 				BB3B649D29A3908F005D41CF /* ExpandableComponentView.swift in Sources */,
 				BB424B0A299CF4A10061A5C3 /* AuthorModel.swift in Sources */,
