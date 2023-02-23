@@ -12,6 +12,9 @@
 		BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */; };
 		BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */; };
 		BB1C24AA29A77B1900714A4C /* BookCardComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C24A929A77B1900714A4C /* BookCardComponentView.swift */; };
+		BB1C24B129A79E1C00714A4C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C24B029A79E1C00714A4C /* LoginView.swift */; };
+		BB1C24B329A79E3300714A4C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C24B229A79E3300714A4C /* RegistrationView.swift */; };
+		BB1C24B529A79E5700714A4C /* AccountRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C24B429A79E5700714A4C /* AccountRecoveryView.swift */; };
 		BB34152329A60552007C0A65 /* InfiniteLoopBugExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */; };
 		BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152429A606ED007C0A65 /* Color+Extension.swift */; };
 		BB34152729A61601007C0A65 /* CartViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152629A61601007C0A65 /* CartViewRow.swift */; };
@@ -70,6 +73,9 @@
 		BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextComponentView.swift; sourceTree = "<group>"; };
 		BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomComponentView.swift; sourceTree = "<group>"; };
 		BB1C24A929A77B1900714A4C /* BookCardComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCardComponentView.swift; sourceTree = "<group>"; };
+		BB1C24B029A79E1C00714A4C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BB1C24B229A79E3300714A4C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		BB1C24B429A79E5700714A4C /* AccountRecoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRecoveryView.swift; sourceTree = "<group>"; };
 		BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteLoopBugExampleView.swift; sourceTree = "<group>"; };
 		BB34152429A606ED007C0A65 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		BB34152629A61601007C0A65 /* CartViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewRow.swift; sourceTree = "<group>"; };
@@ -136,6 +142,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB1C24AE29A79DE600714A4C /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				BB1C24B729A7A4B200714A4C /* SignUp */,
+				BB1C24B629A7A4AA00714A4C /* Login */,
+				BB1C24B029A79E1C00714A4C /* LoginView.swift */,
+				BB1C24B229A79E3300714A4C /* RegistrationView.swift */,
+				BB1C24B429A79E5700714A4C /* AccountRecoveryView.swift */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		BB1C24B629A7A4AA00714A4C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BB1C24B729A7A4B200714A4C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		BB34152129A60510007C0A65 /* Debugging */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +196,7 @@
 		BB424AE4299BC93D0061A5C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB1C24AE29A79DE600714A4C /* Authentification */,
 				BB4BA609299E7934007095C6 /* Details */,
 				BB424AEB299BEF460061A5C3 /* Components */,
 				BB424B11299D09680061A5C3 /* AppTabView.swift */,
@@ -457,6 +490,7 @@
 				BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */,
 				BB4BA604299E5D50007095C6 /* BookCell.swift in Sources */,
 				BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */,
+				BB1C24B529A79E5700714A4C /* AccountRecoveryView.swift in Sources */,
 				BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */,
 				BB3A7D9929A5149A009714A3 /* CartView.swift in Sources */,
 				BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */,
@@ -477,8 +511,10 @@
 				BB424B12299D09680061A5C3 /* AppTabView.swift in Sources */,
 				BB4BA601299E5CC5007095C6 /* ListBooksView.swift in Sources */,
 				BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */,
+				BB1C24B129A79E1C00714A4C /* LoginView.swift in Sources */,
 				BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */,
 				BB424B06299CE1AA0061A5C3 /* NetworkClient.swift in Sources */,
+				BB1C24B329A79E3300714A4C /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
