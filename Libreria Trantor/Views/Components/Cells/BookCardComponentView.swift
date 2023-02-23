@@ -17,6 +17,7 @@ struct BookCardComponentView: View {
                 AsyncImage(url: book.cover) { image in
                     image
                         .resizable()
+                        .scaledToFill()
                         .cornerRadius(20)
                         .frame(width:180)
                         .scaledToFit()
@@ -41,10 +42,10 @@ struct BookCardComponentView: View {
                 Image(systemName: "minus")
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.black)
-                    .cornerRadius(25)
-                    .padding()
+                    .background(.red)
+                    .cornerRadius(50)
             }
+            .padding()
         }
     }
 }
