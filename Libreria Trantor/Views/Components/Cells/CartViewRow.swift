@@ -18,13 +18,15 @@ struct CartViewRow: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 50)
-                    .cornerRadius(10)
+//                    .cornerRadius(10)
+                    .shadow(radius: 20)
             } placeholder: {
                 ProgressView()
             }
             VStack(alignment: .leading,spacing: 10) {
                 Text(book.title)
-                Text(vm.fetchAuthorName(from: book) ?? "")
+                Text(vm.fetchAuthorName(from: book) ?? "Nombre del autor")
+                    .font(.footnote)
             }
             
             Spacer()

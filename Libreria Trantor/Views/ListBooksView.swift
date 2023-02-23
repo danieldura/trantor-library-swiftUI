@@ -18,12 +18,20 @@ struct ListBooksView: View {
                 }
                 .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                     Button {
-                        vm.addToCart(book: book)
+                        vm.toggleBookOnCart(book: book)
                     } label: {
                         vm.isBookInCart(book) ?
-                        Image(systemName: "plus") : Image(systemName: "plus")
+                        Image(systemName: "minus") : Image(systemName: "plus")
                     }
                     .tint(vm.isBookInCart(book) ? .gray : .green)
+                }
+                .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                    Button {
+                        vm.toggleReadBook(book: book)
+                    } label: {
+                        vm.isReadedBook(book) ? Image(systemName: "book.closed") : Image(systemName:"book.fill")
+                    }
+                    .tint(vm.isReadedBook(book) ? .gray : .yellow)
                 }
             }
             .navigationTitle("Books".localized)

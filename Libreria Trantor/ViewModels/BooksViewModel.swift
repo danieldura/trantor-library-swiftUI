@@ -57,10 +57,30 @@ final class BooksViewModel: ObservableObject {
         cartBooks = cartBooks.filter { $0.id != book.id }
     }
     
+    func toggleBookOnCart(book:BookModel) {
+        if cartBooks.contains(where: { $0 == book}) {
+            cartBooks.removeAll(where: { $0 == book})
+        } else {
+            cartBooks.append(book)
+        }
+    }
+    
     func makeOrder(){
         
     }
+    
     func isBookInCart(_ book: BookModel) -> Bool {
         cartBooks.contains(where: { $0 == book })
+    }
+    
+    func toggleReadBook(book:BookModel){
+        if readBooks.contains(where: { $0 == book}) {
+            readBooks.removeAll(where: { $0 == book})
+        } else {
+            readBooks.append(book)
+        }
+    }
+    func isReadedBook(_ book: BookModel) -> Bool {
+        readBooks.contains(where: { $0 == book })
     }
 }

@@ -11,6 +11,7 @@
 		BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */; };
 		BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */; };
 		BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */; };
+		BB1C24AA29A77B1900714A4C /* BookCardComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C24A929A77B1900714A4C /* BookCardComponentView.swift */; };
 		BB34152329A60552007C0A65 /* InfiniteLoopBugExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */; };
 		BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152429A606ED007C0A65 /* Color+Extension.swift */; };
 		BB34152729A61601007C0A65 /* CartViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152629A61601007C0A65 /* CartViewRow.swift */; };
@@ -68,6 +69,7 @@
 		BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextComponentView.swift; sourceTree = "<group>"; };
 		BB1B92DD299FB9E1005C3BD4 /* ZoomComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomComponentView.swift; sourceTree = "<group>"; };
+		BB1C24A929A77B1900714A4C /* BookCardComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCardComponentView.swift; sourceTree = "<group>"; };
 		BB34152229A60552007C0A65 /* InfiniteLoopBugExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteLoopBugExampleView.swift; sourceTree = "<group>"; };
 		BB34152429A606ED007C0A65 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		BB34152629A61601007C0A65 /* CartViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewRow.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			children = (
 				BB4BA603299E5D50007095C6 /* BookCell.swift */,
 				BB34152629A61601007C0A65 /* CartViewRow.swift */,
+				BB1C24A929A77B1900714A4C /* BookCardComponentView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */,
 				BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */,
 				BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */,
+				BB1C24AA29A77B1900714A4C /* BookCardComponentView.swift in Sources */,
 				BB34152329A60552007C0A65 /* InfiniteLoopBugExampleView.swift in Sources */,
 				BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */,
 				BB3B649D29A3908F005D41CF /* ExpandableComponentView.swift in Sources */,

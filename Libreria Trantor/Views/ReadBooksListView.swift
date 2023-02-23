@@ -9,8 +9,26 @@ import SwiftUI
 
 struct ReadBooksListView: View {
     @EnvironmentObject var vm:BooksViewModel
+    
+    var columns = [GridItem(.adaptive(minimum: 160),spacing: 20)]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if vm.readBooks.isEmpty {
+            Text("Add Readed books by *swiping*\nto the left in the books list")
+                .multilineTextAlignment(.center)
+                .bold()
+        } else {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing:20) {
+                    ForEach(vm.readBooks, id: \.id) { book in
+                        BookCardComponentView(book: book)
+                        
+                    }
+                }.padding()
+            }.navigationTitle(Text("Readed books".localized))
+                .navigationBarTitleDisplayMode(.automatic)
+        }
+       
     }
 }
 
