@@ -8,11 +8,6 @@
 import Foundation
 
 final class BooksViewModel: ObservableObject {
-    enum SortType:String, CaseIterable {
-        case ascending = "Ascending"
-        case descending = "Desdending"
-        case none = "None"
-    }
     
     var persistence = ModelPersistence()
     
@@ -24,6 +19,7 @@ final class BooksViewModel: ObservableObject {
     @Published private (set) var readBooks: Books
     @Published private (set) var lovedBooks: Books
     @Published var user:User
+    @Published var screen:Screens = .authentification
     
     
     var latestBooks: Books

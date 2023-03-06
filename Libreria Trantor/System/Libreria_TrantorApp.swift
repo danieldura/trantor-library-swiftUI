@@ -16,9 +16,7 @@ struct Libreria_TrantorApp: App {
     
     var body: some Scene {
         WindowGroup {
-                AppTabView()
-                    .environmentObject(booksVM)
-
+            AppTabView().environmentObject(booksVM)
                 .overlay {
                     if monitorNetwork.status == .offline {
                         AppOfflineView()

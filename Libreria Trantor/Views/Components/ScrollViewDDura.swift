@@ -66,7 +66,7 @@ private extension ScrollViewDDura {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ScrollViewDDura_Previews: PreviewProvider {
     static var previews: some View {
         ScrollViewDDura(title: "Trantor Library".localized, headerGradient: Gradient(colors: [.red,.secondary]), content: {
                 

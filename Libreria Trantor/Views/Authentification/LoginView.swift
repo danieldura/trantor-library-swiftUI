@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var vm:UserViewModel
+    @EnvironmentObject var vm:BooksViewModel
+    @EnvironmentObject var userVM:UserViewModel
     @State var showLostPassword = false
     var body: some View {
         
         Group {
-            if vm.authenticationState == .authenticating {
+            if userVM.authenticationState == .authenticating {
                 
                 ProgressView()
                     .frame(maxWidth:.infinity, maxHeight: .infinity)
@@ -26,17 +27,17 @@ struct LoginView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("Email".localized)
                                 .font(.headline)
-                            TextField("Email", text:$vm.user.email)
+                            TextField("Email", text:$userVM.user.email)
                                 .textContentType(.emailAddress)
                                 .autocorrectionDisabled()
                                 .textInputAutocapitalization(.never)
                                 .keyboardType(.emailAddress)
                             Text("Password".localized)
                                 .font(.headline)
-                            SecureField("Password".localized, text: $vm.password)
+                            SecureField("Password".localized, text: $userVM.password)
                             
                             Button {
-                                vm.login()
+                                userVM.login()
                             } label: {
                                 Text("Entry".localized)
                             }
@@ -58,8 +59,8 @@ struct LoginView: View {
                     }
                     .textFieldStyle(.roundedBorder)
                     
-                    if !vm.errorMsg.isEmpty {
-                        Text(vm.errorMsg)
+                    if !userVM.errorMsg.isEmpty {
+                        Text(userVM.errorMsg)
                             .foregroundColor(.white)
                             .padding()
                             .background {
@@ -90,7 +91,7 @@ struct LoginView: View {
                 Text("Usuario a recuperar")
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                TextField("Introduzca el email", text: $vm.user.email)
+                TextField("Introduzca el email", text: $userVM.user.email)
                     .textContentType(.username)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
@@ -114,6 +115,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(vm:UserViewModel(user: .test))
+        LoginView().environmentObject(BooksViewModel())
+            .environmentObject(UserViewModel(user: .test))
     }
 }
