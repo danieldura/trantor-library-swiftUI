@@ -9,13 +9,15 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var vm:BooksViewModel
-    @EnvironmentObject var userVM:UserViewModel
+    @ObservedObject var userVM:UserViewModel
+    
     @State var showLostPassword = false
+    @State var password:String = ""
+    
     var body: some View {
         
         Group {
             if userVM.authenticationState == .authenticating {
-                
                 ProgressView()
                     .frame(maxWidth:.infinity, maxHeight: .infinity)
             } else {
@@ -23,22 +25,25 @@ struct LoginView: View {
                     Text("Login".localized)
                         .font(.largeTitle)
                         .bold()
+                        .foregroundColor(.random)
                     GroupBox {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("Email".localized)
                                 .font(.headline)
-                            TextField("Email", text:$userVM.user.email)
+                            TextField("Email", text:$userVM.email)
                                 .textContentType(.emailAddress)
                                 .autocorrectionDisabled()
                                 .textInputAutocapitalization(.never)
                                 .keyboardType(.emailAddress)
                             Text("Password".localized)
                                 .font(.headline)
-                            SecureField("Password".localized, text: $userVM.password)
+                            SecureField("Password".localized, text: $password)
                             
                             Button {
-                                userVM.login()
-                            } label: {
+                                Task {
+                                    await userVM.login(email: userVM.email, pass: password)
+                                }
+                                                            } label: {
                                 Text("Entry".localized)
                             }
                             .buttonStyle(.borderedProminent)
@@ -91,7 +96,7 @@ struct LoginView: View {
                 Text("Usuario a recuperar")
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                TextField("Introduzca el email", text: $userVM.user.email)
+                TextField("Introduzca el email", text: $userVM.email)
                     .textContentType(.username)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
@@ -115,7 +120,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(BooksViewModel())
-            .environmentObject(UserViewModel(user: .test))
+        LoginView(userVM:UserViewModel()).environmentObject(BooksViewModel())
     }
 }

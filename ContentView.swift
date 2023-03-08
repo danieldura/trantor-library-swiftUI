@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         switch vm.screen {
         case .authentification:
-            LoginView()
+            LoginView(userVM: UserViewModel())
         case .userHome:
             AppTabView()
         }

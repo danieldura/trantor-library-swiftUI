@@ -79,4 +79,9 @@ final class BooksViewModel: ObservableObject {
     func isReadedBook(_ book: BookModel) -> Bool {
         readBooks.contains(where: { $0 == book })
     }
+    
+    func loggedOut() {
+        screen = .authentification
+        //TODO: Remove user from data.
+    }
 }
