@@ -30,14 +30,14 @@ struct LoginView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("Email".localized)
                                 .font(.headline)
-                            TextField("Email", text:$userVM.email)
+                            TextField("Introduce your email".localized, text:$userVM.email)
                                 .textContentType(.emailAddress)
                                 .autocorrectionDisabled()
                                 .textInputAutocapitalization(.never)
                                 .keyboardType(.emailAddress)
                             Text("Password".localized)
                                 .font(.headline)
-                            SecureField("Password".localized, text: $password)
+                            SecureField("Introduce your Password".localized, text: $password)
                             
                             Button {
                                 Task {
@@ -52,7 +52,7 @@ struct LoginView: View {
                             Button {
                                 showLostPassword.toggle()
                             } label: {
-                                Text("¿Has perdido la clave?")
+                                Text("Have you forgotten the password?".localized)
                             }
                             
 
@@ -89,7 +89,7 @@ struct LoginView: View {
     
     var lostPassword: some View {
         VStack {
-            Text("Lost Password")
+            Text("Lost Password".localized)
                 .font(.largeTitle)
                 .bold()
             GroupBox {
@@ -104,7 +104,7 @@ struct LoginView: View {
                 Button {
                     showLostPassword.toggle()
                 } label: {
-                    Text("Recuperar clave")
+                    Text("Recover password".localized)
                 }
                 .buttonStyle(.borderedProminent)
                 .padding(.top)

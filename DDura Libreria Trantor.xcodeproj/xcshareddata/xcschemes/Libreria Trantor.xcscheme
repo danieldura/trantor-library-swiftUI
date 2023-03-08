@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BBB6A2282993FAB2005C0FF4"
-               BuildableName = "Libreria Trantor.app"
-               BlueprintName = "Libreria Trantor"
-               ReferencedContainer = "container:Libreria Trantor.xcodeproj">
+               BuildableName = "DDura Libreria Trantor.app"
+               BlueprintName = "DDura Libreria Trantor"
+               ReferencedContainer = "container:DDura Libreria Trantor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "BBC193E1299E54E1006219CD"
                BuildableName = "LibreriaTrantorTests.xctest"
                BlueprintName = "LibreriaTrantorTests"
-               ReferencedContainer = "container:Libreria Trantor.xcodeproj">
+               ReferencedContainer = "container:DDura Libreria Trantor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -59,9 +59,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BBB6A2282993FAB2005C0FF4"
-            BuildableName = "Libreria Trantor.app"
-            BlueprintName = "Libreria Trantor"
-            ReferencedContainer = "container:Libreria Trantor.xcodeproj">
+            BuildableName = "DDura Libreria Trantor.app"
+            BlueprintName = "DDura Libreria Trantor"
+            ReferencedContainer = "container:DDura Libreria Trantor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BBB6A2282993FAB2005C0FF4"
-            BuildableName = "Libreria Trantor.app"
-            BlueprintName = "Libreria Trantor"
-            ReferencedContainer = "container:Libreria Trantor.xcodeproj">
+            BuildableName = "DDura Libreria Trantor.app"
+            BlueprintName = "DDura Libreria Trantor"
+            ReferencedContainer = "container:DDura Libreria Trantor.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

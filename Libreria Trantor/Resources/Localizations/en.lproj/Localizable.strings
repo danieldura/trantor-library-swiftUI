@@ -23,7 +23,7 @@
 
 
 
-/* User View*/
+
 "Welcome %@" = "¡Welcome %@!";
 "Readed Books" = "Readed Books";
 
@@ -32,4 +32,16 @@
 "No ordered books?" = "No ordered books?";
 "Orders List" = "Orders List";
 "No orders" = "No orders";
+
+/* Authentification*/
+"Login" = "Login";
+"Email" = "Email";
+"Introduce your email" = "Introduce your email";
+"Password" = "Password";
+"Introduce your Password" = "Introduce your Password";
+
+"Have you forgotten the password?" = "Have you forgotten the password?";
+"Lost Password" = "Lost Password";
+"Recover password" = "Recover password";
+
 

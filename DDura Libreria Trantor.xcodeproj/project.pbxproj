@@ -112,7 +112,7 @@
 		BB4BA605299E651A007095C6 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		BB4BA607299E78EA007095C6 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		BB4BA60A299E7B1A007095C6 /* ReadBooksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBooksListView.swift; sourceTree = "<group>"; };
-		BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DDura Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libreria_TrantorApp.swift; sourceTree = "<group>"; };
 		BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDDura.swift; sourceTree = "<group>"; };
 		BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 		BBB6A22A2993FAB2005C0FF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */,
+				BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */,
 				BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */,
 			);
 			name = Products;
@@ -377,9 +377,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BBB6A2282993FAB2005C0FF4 /* Libreria Trantor */ = {
+		BBB6A2282993FAB2005C0FF4 /* DDura Libreria Trantor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BBB6A2372993FAB3005C0FF4 /* Build configuration list for PBXNativeTarget "Libreria Trantor" */;
+			buildConfigurationList = BBB6A2372993FAB3005C0FF4 /* Build configuration list for PBXNativeTarget "DDura Libreria Trantor" */;
 			buildPhases = (
 				BBB6A2252993FAB2005C0FF4 /* Sources */,
 				BBB6A2262993FAB2005C0FF4 /* Frameworks */,
@@ -389,9 +389,9 @@
 			);
 			dependencies = (
 			);
-			name = "Libreria Trantor";
+			name = "DDura Libreria Trantor";
 			productName = "Libreria Trantor";
-			productReference = BBB6A2292993FAB2005C0FF4 /* Libreria Trantor.app */;
+			productReference = BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BBC193E1299E54E1006219CD /* LibreriaTrantorTests */ = {
@@ -431,7 +431,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BBB6A2242993FAB2005C0FF4 /* Build configuration list for PBXProject "Libreria Trantor" */;
+			buildConfigurationList = BBB6A2242993FAB2005C0FF4 /* Build configuration list for PBXProject "DDura Libreria Trantor" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -446,7 +446,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BBB6A2282993FAB2005C0FF4 /* Libreria Trantor */,
+				BBB6A2282993FAB2005C0FF4 /* DDura Libreria Trantor */,
 				BBC193E1299E54E1006219CD /* LibreriaTrantorTests */,
 			);
 		};
@@ -539,7 +539,7 @@
 /* Begin PBXTargetDependency section */
 		BBC193E7299E54E1006219CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BBB6A2282993FAB2005C0FF4 /* Libreria Trantor */;
+			target = BBB6A2282993FAB2005C0FF4 /* DDura Libreria Trantor */;
 			targetProxy = BBC193E6299E54E1006219CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -751,7 +751,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Libreria Trantor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Libreria Trantor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DDura Libreria Trantor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DDura Libreria Trantor";
 			};
 			name = Debug;
 		};
@@ -770,14 +770,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Libreria Trantor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Libreria Trantor";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DDura Libreria Trantor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DDura Libreria Trantor";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BBB6A2242993FAB2005C0FF4 /* Build configuration list for PBXProject "Libreria Trantor" */ = {
+		BBB6A2242993FAB2005C0FF4 /* Build configuration list for PBXProject "DDura Libreria Trantor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBB6A2352993FAB3005C0FF4 /* Debug */,
@@ -786,7 +786,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BBB6A2372993FAB3005C0FF4 /* Build configuration list for PBXNativeTarget "Libreria Trantor" */ = {
+		BBB6A2372993FAB3005C0FF4 /* Build configuration list for PBXNativeTarget "DDura Libreria Trantor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBB6A2382993FAB3005C0FF4 /* Debug */,

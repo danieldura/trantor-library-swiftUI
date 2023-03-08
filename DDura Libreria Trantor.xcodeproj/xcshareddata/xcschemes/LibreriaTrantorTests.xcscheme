@@ -20,7 +20,7 @@
                BlueprintIdentifier = "BBC193E1299E54E1006219CD"
                BuildableName = "LibreriaTrantorTests.xctest"
                BlueprintName = "LibreriaTrantorTests"
-               ReferencedContainer = "container:Libreria Trantor.xcodeproj">
+               ReferencedContainer = "container:DDura Libreria Trantor.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
