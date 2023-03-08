@@ -32,7 +32,11 @@ enum NetworkError: Error {
         case .URLError:
             return "url_error".localized
         case .status(let int):
-            return "Server Status Error: %@".localized(with: int)
+            if int == 404 {
+                return "Not Found".localized
+            } else {
+                return "Server Status Error: %@".localized(with: int)
+            }
         case let .general(error):
             return "Error de construcción \(error)"
         }

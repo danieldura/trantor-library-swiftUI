@@ -46,6 +46,7 @@
 		BB4BA606299E651A007095C6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BA605299E651A007095C6 /* RatingView.swift */; };
 		BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BA607299E78EA007095C6 /* BookDetailView.swift */; };
 		BB4BA60B299E7B1A007095C6 /* ReadBooksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BA60A299E7B1A007095C6 /* ReadBooksListView.swift */; };
+		BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */; };
 		BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */; };
 		BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */; };
 		BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		BB4BA605299E651A007095C6 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		BB4BA607299E78EA007095C6 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		BB4BA60A299E7B1A007095C6 /* ReadBooksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBooksListView.swift; sourceTree = "<group>"; };
+		BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
 		BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DDura Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libreria_TrantorApp.swift; sourceTree = "<group>"; };
 		BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDDura.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				BB424AE9299BE1EA0061A5C3 /* NetworkStatus.swift */,
 				BB424B01299CD9A60061A5C3 /* NetworkError.swift */,
 				BB424B05299CE1AA0061A5C3 /* NetworkClient.swift */,
+				BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				BB4BA601299E5CC5007095C6 /* ListBooksView.swift in Sources */,
 				BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */,
 				BB1C24B129A79E1C00714A4C /* LoginView.swift in Sources */,
+				BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */,
 				BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */,
 				BB424B06299CE1AA0061A5C3 /* NetworkClient.swift in Sources */,
 				BB1C24B329A79E3300714A4C /* RegistrationView.swift in Sources */,

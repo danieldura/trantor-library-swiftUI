@@ -30,16 +30,27 @@ final class UserViewModel:ObservableObject {
     
     
     @MainActor
-    func login(email:String, pass:String) async{
+    func login(email:String, pass:String) async throws -> User? {
             authenticationState = .authenticating
-
+        do {
             // Simulating network call for authentication
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 if email == User.test.email {
-                    self.authenticationState = .loggedIn
+                    do {
+                        self.authenticationState = .loggedIn
+                        
+                    }
+                    
                 } else {
                     self.authenticationState = .authenticationFailed
                 }
             }
+            return User(id: 1, email: "hola@ddura.es")
+        }catch {
+            throw LoginError.password
+        }
+
+
+        
         }
 }

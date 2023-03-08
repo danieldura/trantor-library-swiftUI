@@ -41,7 +41,8 @@ struct LoginView: View {
                             
                             Button {
                                 Task {
-                                    await userVM.login(email: userVM.email, pass: password)
+                                    try await userVM.login(email: userVM.email, pass: password)
+                                    
                                 }
                                                             } label: {
                                 Text("Entry".localized)
