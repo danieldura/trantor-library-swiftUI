@@ -58,6 +58,7 @@
 		BBC193DA299E4948006219CD /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D9299E4948006219CD /* BooksViewModel.swift */; };
 		BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193DB299E4CC1006219CD /* AppDelegate.swift */; };
 		BBC193E5299E54E1006219CD /* LibreriaTrantorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */; };
+		BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibreriaTrantorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreriaTrantorTests.swift; sourceTree = "<group>"; };
 		BBC193EB299E5870006219CD /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 		BBB6A22B2993FAB2005C0FF4 /* Libreria Trantor */ = {
 			isa = PBXGroup;
 			children = (
+				BBDD00F929B9EE6E00A41F99 /* Data */,
 				BB424AE6299BC95D0061A5C3 /* Models */,
 				BB424AE5299BC94A0061A5C3 /* ViewModels */,
 				BB424AE4299BC93D0061A5C3 /* Views */,
@@ -348,7 +351,6 @@
 			children = (
 				BB3B64A129A3C6FA005D41CF /* Extensions */,
 				BB3B649E29A3B8FA005D41CF /* Environment */,
-				BB424AE8299BDFB40061A5C3 /* Network */,
 				BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */,
 				BB424B00299BF3940061A5C3 /* Libreria-Trantor-Info.plist */,
 				BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */,
@@ -375,6 +377,23 @@
 				BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */,
 			);
 			path = LibreriaTrantorTests;
+			sourceTree = "<group>";
+		};
+		BBDD00F929B9EE6E00A41F99 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BBDD00FA29B9EE7600A41F99 /* API */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BBDD00FA29B9EE7600A41F99 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BB424AE8299BDFB40061A5C3 /* Network */,
+				BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,6 +545,7 @@
 				BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */,
 				BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */,
 				BB424B06299CE1AA0061A5C3 /* NetworkClient.swift in Sources */,
+				BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */,
 				BB1C24B329A79E3300714A4C /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
