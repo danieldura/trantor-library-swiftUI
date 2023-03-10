@@ -47,6 +47,8 @@
 		BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BA607299E78EA007095C6 /* BookDetailView.swift */; };
 		BB4BA60B299E7B1A007095C6 /* ReadBooksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BA60A299E7B1A007095C6 /* ReadBooksListView.swift */; };
 		BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */; };
+		BBA359EA29BB575B005A2F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359E929BB575B005A2F74 /* Constants.swift */; };
+		BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */; };
 		BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */; };
 		BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */; };
 		BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */; };
@@ -115,6 +117,8 @@
 		BB4BA607299E78EA007095C6 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		BB4BA60A299E7B1A007095C6 /* ReadBooksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBooksListView.swift; sourceTree = "<group>"; };
 		BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		BBA359E929BB575B005A2F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DDura Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libreria_TrantorApp.swift; sourceTree = "<group>"; };
 		BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDDura.swift; sourceTree = "<group>"; };
@@ -294,6 +298,38 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		BBA359EB29BB6AAE005A2F74 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BBA359EC29BB6AC0005A2F74 /* Authentication */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BBA359EC29BB6AC0005A2F74 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BBA359EE29BB6B39005A2F74 /* Repository */,
+				BBA359ED29BB6B2D005A2F74 /* Request */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		BBA359ED29BB6B2D005A2F74 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		BBA359EE29BB6B39005A2F74 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		BBB6A2202993FAB2005C0FF4 = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +392,7 @@
 				BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */,
 				BBC193DB299E4CC1006219CD /* AppDelegate.swift */,
 				BB34152A29A62745007C0A65 /* ApplePayHandler.swift */,
+				BBA359E929BB575B005A2F74 /* Constants.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -390,6 +427,7 @@
 		BBDD00FA29B9EE7600A41F99 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				BBA359EB29BB6AAE005A2F74 /* Repositories */,
 				BB424AE8299BDFB40061A5C3 /* Network */,
 				BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */,
 			);
@@ -531,6 +569,7 @@
 				BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */,
 				BB24932829B65BBB007E7932 /* ContentView.swift in Sources */,
 				BB1C24AA29A77B1900714A4C /* BookCardComponentView.swift in Sources */,
+				BBA359EA29BB575B005A2F74 /* Constants.swift in Sources */,
 				BB34152329A60552007C0A65 /* InfiniteLoopBugExampleView.swift in Sources */,
 				BB4BA608299E78EA007095C6 /* BookDetailView.swift in Sources */,
 				BB3B649D29A3908F005D41CF /* ExpandableComponentView.swift in Sources */,
@@ -541,6 +580,7 @@
 				BB424B12299D09680061A5C3 /* AppTabView.swift in Sources */,
 				BB4BA601299E5CC5007095C6 /* ListBooksView.swift in Sources */,
 				BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */,
+				BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */,
 				BB1C24B129A79E1C00714A4C /* LoginView.swift in Sources */,
 				BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */,
 				BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */,
