@@ -49,6 +49,10 @@
 		BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */; };
 		BBA359EA29BB575B005A2F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359E929BB575B005A2F74 /* Constants.swift */; };
 		BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */; };
+		BBA359F429BB8315005A2F74 /* UserCredentialStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */; };
+		BBA359F629BB83B5005A2F74 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F529BB83B5005A2F74 /* StorageKeys.swift */; };
+		BBA359F829BB83F7005A2F74 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F729BB83F7005A2F74 /* KeychainConfiguration.swift */; };
+		BBA359FC29BB8A85005A2F74 /* StorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359FB29BB8A85005A2F74 /* StorageTest.swift */; };
 		BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */; };
 		BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */; };
 		BBB6A2312993FAB3005C0FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB6A2302993FAB3005C0FF4 /* Assets.xcassets */; };
@@ -119,6 +123,10 @@
 		BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
 		BBA359E929BB575B005A2F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
+		BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialStorage.swift; sourceTree = "<group>"; };
+		BBA359F529BB83B5005A2F74 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		BBA359F729BB83F7005A2F74 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
+		BBA359FB29BB8A85005A2F74 /* StorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTest.swift; sourceTree = "<group>"; };
 		BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DDura Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libreria_TrantorApp.swift; sourceTree = "<group>"; };
 		BBB6A22E2993FAB2005C0FF4 /* ScrollViewDDura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDDura.swift; sourceTree = "<group>"; };
@@ -330,6 +338,16 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		BBA359F229BB8235005A2F74 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */,
+				BBA359F529BB83B5005A2F74 /* StorageKeys.swift */,
+				BBA359F729BB83F7005A2F74 /* KeychainConfiguration.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		BBB6A2202993FAB2005C0FF4 = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +430,7 @@
 			children = (
 				BBC193EB299E5870006219CD /* TestPlan.xctestplan */,
 				BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */,
+				BBA359FB29BB8A85005A2F74 /* StorageTest.swift */,
 			);
 			path = LibreriaTrantorTests;
 			sourceTree = "<group>";
@@ -419,6 +438,7 @@
 		BBDD00F929B9EE6E00A41F99 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BBA359F229BB8235005A2F74 /* Storage */,
 				BBDD00FA29B9EE7600A41F99 /* API */,
 			);
 			path = Data;
@@ -544,9 +564,12 @@
 				BB3A7D9729A50CD9009714A3 /* CartButton.swift in Sources */,
 				BB34152929A61C08007C0A65 /* ApplePayButtonComponentView.swift in Sources */,
 				BB424B0E299CF5760061A5C3 /* User.swift in Sources */,
+				BBA359F829BB83F7005A2F74 /* KeychainConfiguration.swift in Sources */,
 				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
+				BBA359F429BB8315005A2F74 /* UserCredentialStorage.swift in Sources */,
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
 				BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */,
+				BBA359F629BB83B5005A2F74 /* StorageKeys.swift in Sources */,
 				BB4BA60B299E7B1A007095C6 /* ReadBooksListView.swift in Sources */,
 				BB4BA606299E651A007095C6 /* RatingView.swift in Sources */,
 				BB34152B29A62745007C0A65 /* ApplePayHandler.swift in Sources */,
@@ -595,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC193E5299E54E1006219CD /* LibreriaTrantorTests.swift in Sources */,
+				BBA359FC29BB8A85005A2F74 /* StorageTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Libreria_Trantor
+@testable import DDura_Libreria_Trantor
 
 final class LibreriaTrantorTests: XCTestCase {
     let persistence = ModelPersistence()
