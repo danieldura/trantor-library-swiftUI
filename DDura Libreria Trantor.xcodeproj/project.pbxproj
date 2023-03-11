@@ -64,6 +64,8 @@
 		BBC193DA299E4948006219CD /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D9299E4948006219CD /* BooksViewModel.swift */; };
 		BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193DB299E4CC1006219CD /* AppDelegate.swift */; };
 		BBC193E5299E54E1006219CD /* LibreriaTrantorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */; };
+		BBC567F029BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */; };
+		BBC567F229BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */; };
 		BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BBB6A2282993FAB2005C0FF4;
 			remoteInfo = "Libreria Trantor";
+		};
+		BBC567F329BCA6E600F69152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBB6A2212993FAB2005C0FF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBB6A2282993FAB2005C0FF4;
+			remoteInfo = "DDura Libreria Trantor";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -141,6 +150,9 @@
 		BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibreriaTrantorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreriaTrantorTests.swift; sourceTree = "<group>"; };
 		BBC193EB299E5870006219CD /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		BBC567ED29BCA6E600F69152 /* DDura Libreria TrantorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DDura Libreria TrantorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITests.swift; sourceTree = "<group>"; };
+		BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +165,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BBC193DF299E54E1006219CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC567EA29BCA6E600F69152 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,6 +374,7 @@
 				BB424AE2299BC6AE0061A5C3 /* Documentation.docc */,
 				BBB6A22B2993FAB2005C0FF4 /* Libreria Trantor */,
 				BBC193E3299E54E1006219CD /* LibreriaTrantorTests */,
+				BBC567EE29BCA6E600F69152 /* DDura Libreria TrantorUITests */,
 				BBB6A22A2993FAB2005C0FF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -364,6 +384,7 @@
 			children = (
 				BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */,
 				BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */,
+				BBC567ED29BCA6E600F69152 /* DDura Libreria TrantorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -435,6 +456,15 @@
 			path = LibreriaTrantorTests;
 			sourceTree = "<group>";
 		};
+		BBC567EE29BCA6E600F69152 /* DDura Libreria TrantorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */,
+				BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */,
+			);
+			path = "DDura Libreria TrantorUITests";
+			sourceTree = "<group>";
+		};
 		BBDD00F929B9EE6E00A41F99 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +522,24 @@
 			productReference = BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BBC567EC29BCA6E600F69152 /* DDura Libreria TrantorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBC567F729BCA6E600F69152 /* Build configuration list for PBXNativeTarget "DDura Libreria TrantorUITests" */;
+			buildPhases = (
+				BBC567E929BCA6E600F69152 /* Sources */,
+				BBC567EA29BCA6E600F69152 /* Frameworks */,
+				BBC567EB29BCA6E600F69152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBC567F429BCA6E600F69152 /* PBXTargetDependency */,
+			);
+			name = "DDura Libreria TrantorUITests";
+			productName = "DDura Libreria TrantorUITests";
+			productReference = BBC567ED29BCA6E600F69152 /* DDura Libreria TrantorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -506,6 +554,10 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					BBC193E1299E54E1006219CD = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BBB6A2282993FAB2005C0FF4;
+					};
+					BBC567EC29BCA6E600F69152 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = BBB6A2282993FAB2005C0FF4;
 					};
@@ -528,6 +580,7 @@
 			targets = (
 				BBB6A2282993FAB2005C0FF4 /* DDura Libreria Trantor */,
 				BBC193E1299E54E1006219CD /* LibreriaTrantorTests */,
+				BBC567EC29BCA6E600F69152 /* DDura Libreria TrantorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -547,6 +600,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BBC193E0299E54E1006219CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC567EB29BCA6E600F69152 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -622,6 +682,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BBC567E929BCA6E600F69152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBC567F229BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift in Sources */,
+				BBC567F029BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -629,6 +698,11 @@
 			isa = PBXTargetDependency;
 			target = BBB6A2282993FAB2005C0FF4 /* DDura Libreria Trantor */;
 			targetProxy = BBC193E6299E54E1006219CD /* PBXContainerItemProxy */;
+		};
+		BBC567F429BCA6E600F69152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBB6A2282993FAB2005C0FF4 /* DDura Libreria Trantor */;
+			targetProxy = BBC567F329BCA6E600F69152 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -862,6 +936,42 @@
 			};
 			name = Release;
 		};
+		BBC567F529BCA6E600F69152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BV32R4D4MU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ddura.DDura-Libreria-TrantorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DDura Libreria Trantor";
+			};
+			name = Debug;
+		};
+		BBC567F629BCA6E600F69152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BV32R4D4MU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ddura.DDura-Libreria-TrantorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DDura Libreria Trantor";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -888,6 +998,15 @@
 			buildConfigurations = (
 				BBC193E9299E54E1006219CD /* Debug */,
 				BBC193EA299E54E1006219CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBC567F729BCA6E600F69152 /* Build configuration list for PBXNativeTarget "DDura Libreria TrantorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC567F529BCA6E600F69152 /* Debug */,
+				BBC567F629BCA6E600F69152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
