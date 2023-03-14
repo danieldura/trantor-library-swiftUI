@@ -9,7 +9,7 @@ import Foundation
 
 
 
-final class UserViewModel:BaseObservableObject {
+final class AccountObservableObject:BaseObservableObject {
     enum AuthenticationState {
         case loggedIn
         case loggedOut

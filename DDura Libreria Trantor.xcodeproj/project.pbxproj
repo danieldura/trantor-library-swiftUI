@@ -23,7 +23,7 @@
 		BB34152929A61C08007C0A65 /* ApplePayButtonComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152829A61C08007C0A65 /* ApplePayButtonComponentView.swift */; };
 		BB34152B29A62745007C0A65 /* ApplePayHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34152A29A62745007C0A65 /* ApplePayHandler.swift */; };
 		BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9229A4C8F3009714A3 /* AccountView.swift */; };
-		BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */; };
+		BB3A7D9529A4E16C009714A3 /* AccountObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9429A4E16C009714A3 /* AccountObservableObject.swift */; };
 		BB3A7D9729A50CD9009714A3 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9629A50CD9009714A3 /* CartButton.swift */; };
 		BB3A7D9929A5149A009714A3 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A7D9829A5149A009714A3 /* CartView.swift */; };
 		BB3B649D29A3908F005D41CF /* ExpandableComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */; };
@@ -103,7 +103,7 @@
 		BB34152829A61C08007C0A65 /* ApplePayButtonComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayButtonComponentView.swift; sourceTree = "<group>"; };
 		BB34152A29A62745007C0A65 /* ApplePayHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayHandler.swift; sourceTree = "<group>"; };
 		BB3A7D9229A4C8F3009714A3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		BB3A7D9429A4E16C009714A3 /* AccountObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountObservableObject.swift; sourceTree = "<group>"; };
 		BB3A7D9629A50CD9009714A3 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		BB3A7D9829A5149A009714A3 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableComponentView.swift; sourceTree = "<group>"; };
@@ -184,6 +184,7 @@
 		BB1C24AE29A79DE600714A4C /* Authentification */ = {
 			isa = PBXGroup;
 			children = (
+				BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */,
 				BB1C24B729A7A4B200714A4C /* SignUp */,
 				BB1C24B629A7A4AA00714A4C /* Login */,
 				BB1C24B029A79E1C00714A4C /* LoginView.swift */,
@@ -253,7 +254,7 @@
 			children = (
 				BBC193D9299E4948006219CD /* BaseObservableObject.swift */,
 				BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */,
-				BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */,
+				BB3A7D9429A4E16C009714A3 /* AccountObservableObject.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -323,38 +324,6 @@
 				BB4BA607299E78EA007095C6 /* BookDetailView.swift */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		BBA359EB29BB6AAE005A2F74 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				BBA359EC29BB6AC0005A2F74 /* Authentication */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		BBA359EC29BB6AC0005A2F74 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				BBA359EE29BB6B39005A2F74 /* Repository */,
-				BBA359ED29BB6B2D005A2F74 /* Request */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		BBA359ED29BB6B2D005A2F74 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		BBA359EE29BB6B39005A2F74 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		BBA359F229BB8235005A2F74 /* Storage */ = {
@@ -477,7 +446,6 @@
 		BBDD00FA29B9EE7600A41F99 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				BBA359EB29BB6AAE005A2F74 /* Repositories */,
 				BB424AE8299BDFB40061A5C3 /* Network */,
 				BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */,
 			);
@@ -643,7 +611,7 @@
 				BB1C24B529A79E5700714A4C /* AccountRecoveryView.swift in Sources */,
 				BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */,
 				BB3A7D9929A5149A009714A3 /* CartView.swift in Sources */,
-				BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */,
+				BB3A7D9529A4E16C009714A3 /* AccountObservableObject.swift in Sources */,
 				BBC193D1299E2909006219CD /* OffsetObservingScrollView.swift in Sources */,
 				BB424AFF299BF1C20061A5C3 /* localizable+extension.swift in Sources */,
 				BBC193DA299E4948006219CD /* BaseObservableObject.swift in Sources */,
