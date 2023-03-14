@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookDetailView: View {
-    @EnvironmentObject var booksVM:BooksViewModel
+    @EnvironmentObject var booksVM:BaseObservableObject
     @ObservedObject var vm:BookDetailViewModel
     var body: some View {
         ScrollView {
@@ -81,7 +81,7 @@ private extension BookDetailView {
             }
         }
     }
-    func authorView(with vm:BooksViewModel, and bvm:BookDetailViewModel) -> some View {
+    func authorView(with vm:BaseObservableObject, and bvm:BookDetailViewModel) -> some View {
         VStack{
             Text("Writed by...".localized)
                 .font(.largeTitle)
@@ -95,6 +95,6 @@ private extension BookDetailView {
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
         BookDetailView(vm:BookDetailViewModel(book: .test))
-            .environmentObject(BooksViewModel())
+            .environmentObject(BaseObservableObject())
     }
 }

@@ -61,7 +61,7 @@
 		BBC193D1299E2909006219CD /* OffsetObservingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D0299E2909006219CD /* OffsetObservingScrollView.swift */; };
 		BBC193D4299E425C006219CD /* AuthorsData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBC193D3299E425C006219CD /* AuthorsData.json */; };
 		BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D5299E42C6006219CD /* ModelPersistence.swift */; };
-		BBC193DA299E4948006219CD /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D9299E4948006219CD /* BooksViewModel.swift */; };
+		BBC193DA299E4948006219CD /* BaseObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193D9299E4948006219CD /* BaseObservableObject.swift */; };
 		BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193DB299E4CC1006219CD /* AppDelegate.swift */; };
 		BBC193E5299E54E1006219CD /* LibreriaTrantorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */; };
 		BBC567F029BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */; };
@@ -145,7 +145,7 @@
 		BBC193D0299E2909006219CD /* OffsetObservingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetObservingScrollView.swift; sourceTree = "<group>"; };
 		BBC193D3299E425C006219CD /* AuthorsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AuthorsData.json; sourceTree = "<group>"; };
 		BBC193D5299E42C6006219CD /* ModelPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPersistence.swift; sourceTree = "<group>"; };
-		BBC193D9299E4948006219CD /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		BBC193D9299E4948006219CD /* BaseObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObservableObject.swift; sourceTree = "<group>"; };
 		BBC193DB299E4CC1006219CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBC193E2299E54E1006219CD /* LibreriaTrantorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibreriaTrantorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC193E4299E54E1006219CD /* LibreriaTrantorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreriaTrantorTests.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BB424AE4299BC93D0061A5C3 /* Views */ = {
+		BB424AE4299BC93D0061A5C3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				BB1C24AE29A79DE600714A4C /* Authentification */,
@@ -245,13 +245,13 @@
 				BB3A7D9229A4C8F3009714A3 /* AccountView.swift */,
 				BB3A7D9829A5149A009714A3 /* CartView.swift */,
 			);
-			path = Views;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		BB424AE5299BC94A0061A5C3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				BBC193D9299E4948006219CD /* BooksViewModel.swift */,
+				BBC193D9299E4948006219CD /* BaseObservableObject.swift */,
 				BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */,
 				BB3A7D9429A4E16C009714A3 /* UserViewModel.swift */,
 			);
@@ -395,7 +395,7 @@
 				BBDD00F929B9EE6E00A41F99 /* Data */,
 				BB424AE6299BC95D0061A5C3 /* Models */,
 				BB424AE5299BC94A0061A5C3 /* ViewModels */,
-				BB424AE4299BC93D0061A5C3 /* Views */,
+				BB424AE4299BC93D0061A5C3 /* Scenes */,
 				BBB6A23D2993FE65005C0FF4 /* System */,
 				BBB6A23C2993FE58005C0FF4 /* Resources */,
 				BBB6A2322993FAB3005C0FF4 /* Preview Content */,
@@ -646,7 +646,7 @@
 				BB3A7D9529A4E16C009714A3 /* UserViewModel.swift in Sources */,
 				BBC193D1299E2909006219CD /* OffsetObservingScrollView.swift in Sources */,
 				BB424AFF299BF1C20061A5C3 /* localizable+extension.swift in Sources */,
-				BBC193DA299E4948006219CD /* BooksViewModel.swift in Sources */,
+				BBC193DA299E4948006219CD /* BaseObservableObject.swift in Sources */,
 				BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */,
 				BB424AE3299BC6AE0061A5C3 /* Documentation.docc in Sources */,
 				BB1B92DE299FB9E2005C3BD4 /* ZoomComponentView.swift in Sources */,

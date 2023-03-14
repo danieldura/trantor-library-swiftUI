@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListBooksView: View {
-    @EnvironmentObject var vm:BooksViewModel
+    @EnvironmentObject var vm:BaseObservableObject
     
     var body: some View {
         NavigationStack {
@@ -58,7 +58,7 @@ struct ListBooksView: View {
     
 
 struct ListBooksView_Previews: PreviewProvider {
-    static let vm = BooksViewModel()
+    static let vm = BaseObservableObject()
     static var previews: some View {
         ListBooksView()
             .environmentObject(vm)

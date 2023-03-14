@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Libreria_TrantorApp: App {
-    @StateObject var booksVM = BooksViewModel()
+    @StateObject var booksVM = BaseObservableObject()
     @StateObject var monitorNetwork = NetworkStatus()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     

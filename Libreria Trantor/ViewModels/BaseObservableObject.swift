@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class BooksViewModel: ObservableObject {
+class BaseObservableObject: ObservableObject {
     
     var persistence = ModelPersistence()
     

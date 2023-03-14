@@ -10,10 +10,16 @@ import Foundation
 
 
 final class NetworkClient {
+    static let shared = NetworkClient()
+    
+    
     func fetch<T:Decodable>(apiRequest:APIRequest) async throws -> T {
         do {
             let (data,response) = try await URLSession.shared.data(for: apiRequest.request)
-            guard let httpResponse = response as? HTTPURLResponse else { throw NetworkError.responseError}
+            guard let httpResponse = response as? HTTPURLResponse else {
+                throw NetworkError.responseError
+                
+            }
             if (200...299).contains(httpResponse.statusCode) {
                 guard let decodedData = try? JSONDecoder().decode(T.self, from:data) else {
                     throw NetworkError.encodingError

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CartViewRow: View {
-    @EnvironmentObject var vm:BooksViewModel
+    @EnvironmentObject var vm:BaseObservableObject
     var book: BookModel
     
     var body: some View {
@@ -44,6 +44,6 @@ struct CartViewRow: View {
 
 struct CartViewRow_Previews: PreviewProvider {
     static var previews: some View {
-        CartViewRow(book: .test).environmentObject(BooksViewModel())
+        CartViewRow(book: .test).environmentObject(BaseObservableObject())
     }
 }

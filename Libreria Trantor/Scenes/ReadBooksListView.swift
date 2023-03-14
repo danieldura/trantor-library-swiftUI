@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ReadBooksListView: View {
-    @EnvironmentObject var vm:BooksViewModel
+    @EnvironmentObject var vm:BaseObservableObject
     
     var columns = [GridItem(.adaptive(minimum: 150),spacing: 20)]
     
@@ -32,6 +32,6 @@ struct ReadBooksListView: View {
 
 struct FavoriteBooksListView_Previews: PreviewProvider {
     static var previews: some View {
-        ReadBooksListView().environmentObject(BooksViewModel())
+        ReadBooksListView().environmentObject(BaseObservableObject())
     }
 }

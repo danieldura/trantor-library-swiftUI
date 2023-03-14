@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var vm:BooksViewModel
+    @EnvironmentObject var vm:BaseObservableObject
     @ObservedObject var userVM:UserViewModel
     
     @State var showLostPassword = false
@@ -121,6 +121,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(userVM:UserViewModel()).environmentObject(BooksViewModel())
+        LoginView(userVM:UserViewModel()).environmentObject(BaseObservableObject())
     }
 }

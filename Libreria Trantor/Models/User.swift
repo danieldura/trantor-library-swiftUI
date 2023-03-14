@@ -17,9 +17,18 @@ struct User: Codable, Hashable, Identifiable {
     var readBooks: Books?
     var orderedBooks: Books?
     var orders:orders?
+    var isLoged:Bool {
+        didSet(oldValue){
+            //Save in Storage
+        }
+        willSet(newValue) {
+//            let change = isLoged + newValue
+//            print("Alert! Tire pressure is about to drop by \(change) PSI")
+        }
+    }
     
     static var test:User {
-        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test], orders: [.test])
+        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test], orders: [.test], isLoged: true)
     }
     
     enum UserRole:String, CaseIterable, Codable {

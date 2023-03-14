@@ -9,7 +9,7 @@ import Foundation
 
 
 
-final class UserViewModel:ObservableObject {
+final class UserViewModel:BaseObservableObject {
     enum AuthenticationState {
         case loggedIn
         case loggedOut
@@ -37,10 +37,12 @@ final class UserViewModel:ObservableObject {
         if email == User.test.email {
             
             self.authenticationState = .loggedIn
+            user.isLoged = true
             return User.test
             
         } else {
             self.authenticationState = .authenticationFailed
+            user.isLoged = false
             throw LoginError.password
         }
     }
