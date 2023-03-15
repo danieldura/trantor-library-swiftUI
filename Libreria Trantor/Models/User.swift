@@ -20,10 +20,11 @@ struct User: Codable, Hashable, Identifiable {
     var isLoged:Bool {
         didSet(oldValue){
             //Save in Storage
+            
         }
         willSet(newValue) {
 //            let change = isLoged + newValue
-//            print("Alert! Tire pressure is about to drop by \(change) PSI")
+            print("Alert! New Value on IsLoged \(newValue)")
         }
     }
     
