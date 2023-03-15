@@ -9,15 +9,16 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var vm:BaseObservableObject
-    @ObservedObject var userVM:AccountObservableObject
+    @ObservedObject var account:AccountObservableObject
     
     @State var showLostPassword = false
+    @State var email = ""
     @State var password:String = ""
     
     var body: some View {
         
         Group {
-            if userVM.authenticationState == .authenticating {
+            if account.authenticationState == .authenticating {
                 ProgressView()
                     .frame(maxWidth:.infinity, maxHeight: .infinity)
             } else {
@@ -30,7 +31,7 @@ struct LoginView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             Text("Email".localized)
                                 .font(.headline)
-                            TextField("Introduce your email".localized, text:$userVM.email)
+                            TextField("Introduce your email".localized, text:$email)
                                 .textContentType(.emailAddress)
                                 .autocorrectionDisabled()
                                 .textInputAutocapitalization(.never)
@@ -39,14 +40,9 @@ struct LoginView: View {
                                 .font(.headline)
                             SecureField("Introduce your Password".localized, text: $password)
                             
-                            Button {
-                                Task {
-                                    try await userVM.login(email: userVM.email, pass: password)
-                                    
-                                }
-                                                            } label: {
+                            Button(action:login, label: {
                                 Text("Entry".localized)
-                            }
+                            })
                             .buttonStyle(.borderedProminent)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding()
@@ -65,8 +61,8 @@ struct LoginView: View {
                     }
                     .textFieldStyle(.roundedBorder)
                     
-                    if !userVM.errorMsg.isEmpty {
-                        Text(userVM.errorMsg)
+                    if !account.errorMsg.isEmpty {
+                        Text(account.errorMsg)
                             .foregroundColor(.white)
                             .padding()
                             .background {
@@ -97,7 +93,7 @@ struct LoginView: View {
                 Text("Usuario a recuperar")
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                TextField("Introduzca el email", text: $userVM.email)
+                TextField("Introduzca el email", text: $email)
                     .textContentType(.username)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
@@ -117,10 +113,16 @@ struct LoginView: View {
         .background(.random)
         .ignoresSafeArea()
     }
+    
+    func login() {
+        Task {
+            try await account.login(email: email, pass: password)
+        }
+    }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(userVM:AccountObservableObject()).environmentObject(BaseObservableObject())
+        LoginView(account:AccountObservableObject()).environmentObject(BaseObservableObject())
     }
 }

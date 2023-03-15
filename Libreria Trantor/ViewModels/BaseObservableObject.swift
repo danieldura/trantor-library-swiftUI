@@ -11,6 +11,9 @@ class BaseObservableObject: ObservableObject {
     
     var persistence = ModelPersistence()
     
+    @Published var errorMsg = ""
+    @Published var showAlert = false
+    
     @Published var searchText:String = ""
     @Published private (set) var books: Books
     @Published var suggestedBooks: Books

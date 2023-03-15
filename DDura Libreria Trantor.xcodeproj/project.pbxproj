@@ -49,6 +49,7 @@
 		BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4DB78629B8C9D500D6BDD8 /* NetworkInterface.swift */; };
 		BB63DC2E29C1D356002A6078 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC2D29C1D356002A6078 /* Tests.swift */; };
 		BB63DC3529C1D378002A6078 /* StorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC3429C1D378002A6078 /* StorageTest.swift */; };
+		BB63DC3829C1D9C1002A6078 /* TestStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC3729C1D9C1002A6078 /* TestStrings.swift */; };
 		BBA359EA29BB575B005A2F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359E929BB575B005A2F74 /* Constants.swift */; };
 		BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */; };
 		BBA359F429BB8315005A2F74 /* UserCredentialStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */; };
@@ -140,6 +141,7 @@
 		BB63DC2B29C1D356002A6078 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB63DC2D29C1D356002A6078 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		BB63DC3429C1D378002A6078 /* StorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTest.swift; sourceTree = "<group>"; };
+		BB63DC3729C1D9C1002A6078 /* TestStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStrings.swift; sourceTree = "<group>"; };
 		BBA359E929BB575B005A2F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialStorage.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		BB1C24AE29A79DE600714A4C /* Authentification */ = {
 			isa = PBXGroup;
 			children = (
+				BB3A7D9429A4E16C009714A3 /* AccountObservableObject.swift */,
 				BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */,
 				BB1C24B729A7A4B200714A4C /* SignUp */,
 				BB1C24B629A7A4AA00714A4C /* Login */,
@@ -268,7 +271,6 @@
 			children = (
 				BBC193D9299E4948006219CD /* BaseObservableObject.swift */,
 				BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */,
-				BB3A7D9429A4E16C009714A3 /* AccountObservableObject.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -343,10 +345,19 @@
 		BB63DC2C29C1D356002A6078 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BB63DC3629C1D9A5002A6078 /* Account */,
 				BB63DC2D29C1D356002A6078 /* Tests.swift */,
 				BB63DC3429C1D378002A6078 /* StorageTest.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		BB63DC3629C1D9A5002A6078 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BB63DC3729C1D9C1002A6078 /* TestStrings.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		BBA359F229BB8235005A2F74 /* Storage */ = {
@@ -634,6 +645,7 @@
 			files = (
 				BB63DC2E29C1D356002A6078 /* Tests.swift in Sources */,
 				BB63DC3529C1D378002A6078 /* StorageTest.swift in Sources */,
+				BB63DC3829C1D9C1002A6078 /* TestStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
