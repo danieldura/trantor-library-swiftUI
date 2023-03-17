@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var vm:BaseObservableObject
-    @ObservedObject var account:AccountObservableObject
+    @EnvironmentObject var account:AccountObservableObject
+//    @ObservedObject var account:AccountObservableObject
     
     @State var showLostPassword = false
     @State var email = ""
@@ -123,6 +123,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(account:AccountObservableObject(networkClient: NetworkClient())).environmentObject(BaseObservableObject())
+        LoginView().environmentObject(AccountObservableObject(networkClient: NetworkClient()))
     }
 }

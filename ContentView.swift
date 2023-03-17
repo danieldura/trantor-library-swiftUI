@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var vm:BaseObservableObject
+    @EnvironmentObject var account:AccountObservableObject
+    @EnvironmentObject var base:BaseObservableObject
     
     var body: some View {
-        switch vm.screen {
+        switch account.screen {
         case .authentification:
-            LoginView(account: AccountObservableObject(networkClient: NetworkClient()))
+            LoginView()
         case .userHome:
-            AppTabView()
+            AppTabView().environmentObject(base)
         }
     }
 }

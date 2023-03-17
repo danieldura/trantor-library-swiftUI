@@ -9,14 +9,17 @@ import SwiftUI
 
 @main
 struct Libreria_TrantorApp: App {
-    @StateObject var booksVM = BaseObservableObject()
+    @StateObject var account = AccountObservableObject(networkClient: NetworkClient())
+    @StateObject var base = BaseObservableObject()
     @StateObject var monitorNetwork = NetworkStatus()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(booksVM)
+            ContentView()
+                .environmentObject(account)
+                .environmentObject(base)
                 .overlay {
                     if monitorNetwork.status == .offline {
                         AppOfflineView()

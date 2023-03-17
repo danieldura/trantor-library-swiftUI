@@ -72,6 +72,7 @@ final class AccountObservableObject:BaseObservableObject {
 //            try Storage.shared.save(user, key: .user)
             
             self.authenticationState = .loggedIn
+            screen = .userHome
             user.isLoged = true
             
         } catch let error as NetworkError {
