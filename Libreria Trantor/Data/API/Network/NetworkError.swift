@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct APIErrorResponse: Codable {
+    let error: Bool
+    let reason: String
+}
+
 enum NetworkError: Error {
     case connectionError
     case responseError
@@ -16,6 +21,7 @@ enum NetworkError: Error {
     case URLError
     case status(Int)
     case general(Error)
+    case apiError(APIErrorResponse)
     
     var description: String {
         switch self {
@@ -37,8 +43,10 @@ enum NetworkError: Error {
             } else {
                 return "Server Status Error: %@".localized(with: int)
             }
-        case let .general(error):
-            return "Error de construcción \(error)"
+        case let .general(error): return "Error de construcción \(error)"
+        case .apiError(let apiError): return apiError.reason
         }
+        
+        
     }
 }

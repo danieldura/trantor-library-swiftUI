@@ -8,7 +8,7 @@
 import Foundation
 
 struct User: Codable, Hashable, Identifiable {
-    let id: Int
+    let id: Int?
     var email:String
     var role:UserRole? = .client
     var location:String?
@@ -17,14 +17,14 @@ struct User: Codable, Hashable, Identifiable {
     var readBooks: Books?
     var orderedBooks: Books?
     var orders:orders?
-    var isLoged:Bool {
+    var isLoged:Bool? {
         didSet(oldValue){
             //Save in Storage
-            
+            print("Alert! Old Value on IsLoged didSet \(oldValue ?? false)")
         }
         willSet(newValue) {
 //            let change = isLoged + newValue
-            print("Alert! New Value on IsLoged \(newValue)")
+            print("Alert! New Value on IsLoged \(newValue ?? false)")
         }
     }
     
@@ -33,8 +33,8 @@ struct User: Codable, Hashable, Identifiable {
     }
     
     enum UserRole:String, CaseIterable, Codable {
-        case admin = "admin"
-        case client = "client"
+        case admin
+        case client = "usuario"
     }
 }
 

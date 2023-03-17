@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         switch vm.screen {
         case .authentification:
-            LoginView(account: AccountObservableObject())
+            LoginView(account: AccountObservableObject(networkClient: NetworkClient()))
         case .userHome:
             AppTabView()
         }

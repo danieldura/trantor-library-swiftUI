@@ -41,7 +41,11 @@ final class AccountObservableObject:BaseObservableObject {
     
     @Published var authenticationState: AuthenticationState = .loggedOut
     
+    var networkClient: NetworkClientProtocol
     
+    init(networkClient: NetworkClientProtocol) {
+        self.networkClient = networkClient
+    }
     
     @MainActor
     func login(email:String, pass:String) async {
@@ -49,31 +53,38 @@ final class AccountObservableObject:BaseObservableObject {
         
         if email.isEmpty {
             errorMsg = LoginError.mandatoryEmail.description
+            failedAuthentication()
             return
         }
-        if pass.isEmpty {
+        if pass.count < 8{
             errorMsg = LoginError.mandatoryPassword.description
+            failedAuthentication()
             return
         }
-        if email.isEmail {
+        if !email.isEmail {
             errorMsg = LoginError.invalidEmail.description
+            failedAuthentication()
             return
         }
         do {
-            let user = User(id: 0, email: email, isLoged: false)
-            let request = AuthenticationRequest.login(user)
-            let userLoged = try await NetworkClient.shared.fetch(apiRequest: request)
-        }
+            let request = AuthenticationRequest.login(User(id: 0, email: email))
+            user = try await networkClient.doRequest(request:request)
+//            try Storage.shared.save(user, key: .user)
             
-        if email == User.test.email {
             self.authenticationState = .loggedIn
             user.isLoged = true
             
-        } else {
-            self.authenticationState = .authenticationFailed
-            user.isLoged = false
-//            throw LoginError.password
+        } catch let error as NetworkError {
+            self.showNetworkError(error)
+            failedAuthentication()
+        } catch {
+            print(error)
+            failedAuthentication()
         }
+    }
+    func failedAuthentication() {
+        self.authenticationState = .authenticationFailed
+        user.isLoged = false
     }
     
 }

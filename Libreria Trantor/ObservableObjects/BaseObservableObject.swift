@@ -21,7 +21,14 @@ class BaseObservableObject: ObservableObject {
     @Published private (set) var cartBooks: Books
     @Published private (set) var readBooks: Books
     @Published private (set) var lovedBooks: Books
-    @Published var user:User
+    @Published var user:User {
+        willSet {
+            if user.isLoged ?? true {
+                screen = .userHome
+            }
+//            screen = user.isLoged ?? false ? .userHome : .authentification
+        }
+    }
     @Published var screen:Screens = .authentification
     
     
@@ -43,6 +50,7 @@ class BaseObservableObject: ObservableObject {
         readBooks = []
         lovedBooks = []
         user = User.test
+        screen = user.isLoged ?? false ? .authentification : .userHome
     }
     
     func fetchAuthorName(from book: BookModel) -> String? {
@@ -86,5 +94,22 @@ class BaseObservableObject: ObservableObject {
     func loggedOut() {
         screen = .authentification
         //TODO: Remove user from data.
+    }
+    
+    @MainActor
+    public func showNetworkError(_ error: NetworkError) {
+//        showLoading(false)
+        switch error {
+        case .apiError(let aPIErrorResponse):
+//            alertTitle = "error_title"
+//            alertMessage = aPIErrorResponse.reason
+//            showError = true
+            print(aPIErrorResponse.reason)
+        default:
+//            alertTitle = "error_popup_title"
+//            alertMessage = "error_popup_message"
+//            showError = true
+            print("default error")
+        }
     }
 }

@@ -50,6 +50,7 @@
 		BB63DC2E29C1D356002A6078 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC2D29C1D356002A6078 /* Tests.swift */; };
 		BB63DC3529C1D378002A6078 /* StorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC3429C1D378002A6078 /* StorageTest.swift */; };
 		BB63DC3829C1D9C1002A6078 /* TestStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC3729C1D9C1002A6078 /* TestStrings.swift */; };
+		BBA219F329C4A5DE00F02C77 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */; };
 		BBA359EA29BB575B005A2F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359E929BB575B005A2F74 /* Constants.swift */; };
 		BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */; };
 		BBA359F429BB8315005A2F74 /* UserCredentialStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */; };
@@ -142,6 +143,7 @@
 		BB63DC2D29C1D356002A6078 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		BB63DC3429C1D378002A6078 /* StorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTest.swift; sourceTree = "<group>"; };
 		BB63DC3729C1D9C1002A6078 /* TestStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStrings.swift; sourceTree = "<group>"; };
+		BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		BBA359E929BB575B005A2F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialStorage.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				BB3B64A229A3C70B005D41CF /* String+Extension.swift */,
 				BB34152429A606ED007C0A65 /* Color+Extension.swift */,
+				BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,13 +269,13 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		BB424AE5299BC94A0061A5C3 /* ViewModels */ = {
+		BB424AE5299BC94A0061A5C3 /* ObservableObjects */ = {
 			isa = PBXGroup;
 			children = (
 				BBC193D9299E4948006219CD /* BaseObservableObject.swift */,
 				BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ObservableObjects;
 			sourceTree = "<group>";
 		};
 		BB424AE6299BC95D0061A5C3 /* Models */ = {
@@ -398,7 +401,7 @@
 			children = (
 				BBDD00F929B9EE6E00A41F99 /* Data */,
 				BB424AE6299BC95D0061A5C3 /* Models */,
-				BB424AE5299BC94A0061A5C3 /* ViewModels */,
+				BB424AE5299BC94A0061A5C3 /* ObservableObjects */,
 				BB424AE4299BC93D0061A5C3 /* Scenes */,
 				BBB6A23D2993FE65005C0FF4 /* System */,
 				BBB6A23C2993FE58005C0FF4 /* Resources */,
@@ -667,6 +670,7 @@
 				BB4BA606299E651A007095C6 /* RatingView.swift in Sources */,
 				BB34152B29A62745007C0A65 /* ApplePayHandler.swift in Sources */,
 				BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */,
+				BBA219F329C4A5DE00F02C77 /* DateFormatter+Extension.swift in Sources */,
 				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
 				BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */,
 				BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */,

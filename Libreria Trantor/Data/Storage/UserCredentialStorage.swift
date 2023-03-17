@@ -9,7 +9,12 @@ import Foundation
 import CryptoKit
 
 
-
+enum StorageError: Error {
+    case encodingFailed
+    case savingFailed
+    case decodingFailed
+    case duplicateItem
+}
 
 class Storage {
     static let shared = Storage()
@@ -66,12 +71,7 @@ class Storage {
 
 
 
-enum StorageError: Error {
-    case encodingFailed
-    case savingFailed
-    case decodingFailed
-    case duplicateItem
-}
+
 
 class SecureStorage {
     static let shared = SecureStorage()

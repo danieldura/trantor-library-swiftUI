@@ -116,13 +116,13 @@ struct LoginView: View {
     
     func login() {
         Task {
-            try await account.login(email: email, pass: password)
+            await account.login(email: email, pass: password)
         }
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(account:AccountObservableObject()).environmentObject(BaseObservableObject())
+        LoginView(account:AccountObservableObject(networkClient: NetworkClient())).environmentObject(BaseObservableObject())
     }
 }
