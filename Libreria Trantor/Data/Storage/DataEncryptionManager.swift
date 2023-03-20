@@ -24,7 +24,7 @@ class DataEncryptionManager {
     func save<T: Codable>(_ item: T, key: StorageKeys) throws {
         do {
             let data = try JSONEncoder().encode(item)
-            let symmetricKey = SymmetricKey(size: .bits256)
+            let symmetricKey = readSymmetricKey()
             let sealedBox = try AES.GCM.seal(data, using: symmetricKey)
             if let encryptedData = sealedBox.combined {
                 try saveData(encryptedData, key: key)
@@ -132,5 +132,11 @@ private extension DataEncryptionManager {
     private func saveSymetricKey(_ symmetricKey:SymmetricKey) throws {
         let data = symmetricKey.withUnsafeBytes { Data($0) }
         try saveData(data, key: StorageKeys.symmetrickey)
+    }
+    private func readSymmetricKey()-> SymmetricKey {
+        guard let symmetricKeyData = read(.symmetrickey) else {
+            return SymmetricKey(size: .bits256)
+        }
+        return SymmetricKey(data: symmetricKeyData)
     }
 }
