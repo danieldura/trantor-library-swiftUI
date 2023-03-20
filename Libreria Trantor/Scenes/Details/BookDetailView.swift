@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookDetailView: View {
-    @EnvironmentObject var booksVM:BaseObservableObject
+    @EnvironmentObject var booksVM:BooksStoreObservableObject
     @ObservedObject var vm:BookDetailViewModel
     var body: some View {
         ScrollView {
@@ -81,7 +81,7 @@ private extension BookDetailView {
             }
         }
     }
-    func authorView(with vm:BaseObservableObject, and bvm:BookDetailViewModel) -> some View {
+    func authorView(with vm:BooksStoreObservableObject, and bvm:BookDetailViewModel) -> some View {
         VStack{
             Text("Writed by...".localized)
                 .font(.largeTitle)

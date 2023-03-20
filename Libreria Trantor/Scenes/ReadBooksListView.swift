@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ReadBooksListView: View {
-    @EnvironmentObject var vm:BaseObservableObject
+    @EnvironmentObject var vm:BooksStoreObservableObject
     
     var columns = [GridItem(.adaptive(minimum: 150),spacing: 20)]
     

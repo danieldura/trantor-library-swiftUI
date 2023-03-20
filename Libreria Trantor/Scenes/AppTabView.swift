@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct AppTabView: View {
+    @EnvironmentObject var store:BooksStoreObservableObject
     var body: some View {
         TabView {
-            ListBooksView()
+            ListBooksView().environmentObject(store)
             .tabItem {
                 Label("Books".localized, systemImage: "books.vertical")
             }
-            ReadBooksListView()
+            ReadBooksListView().environmentObject(store)
                 .badge("!")
             .tabItem{
                 Label("Read".localized,systemImage: "star")
             }
-            AccountView()
+            AccountView().environmentObject(store)
                 .tabItem {
                     Label("Account".localized,systemImage: "person")
                 }

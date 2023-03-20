@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookCardComponentView: View {
-    @EnvironmentObject var vm:BaseObservableObject
+    @EnvironmentObject var vm:BooksStoreObservableObject
     
     var book:BookModel
     var body: some View {

@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var account:AccountObservableObject
-    @EnvironmentObject var base:BaseObservableObject
     
     var body: some View {
         switch account.screen {
         case .authentification:
             LoginView()
         case .userHome:
-            AppTabView().environmentObject(base)
+            AppTabView().environmentObject(BooksStoreObservableObject())
         }
     }
 }

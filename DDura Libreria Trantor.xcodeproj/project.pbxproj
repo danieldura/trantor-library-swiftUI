@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0A943C29C8993F0066EFD4 /* BooksStoreObsevableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A943B29C8993F0066EFD4 /* BooksStoreObsevableObject.swift */; };
 		BB1B92D8299F9892005C3BD4 /* LatestBooksData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1B92D7299F9892005C3BD4 /* LatestBooksData.json */; };
 		BB1B92DA299FA145005C3BD4 /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */; };
 		BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */; };
@@ -96,6 +97,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB0A943B29C8993F0066EFD4 /* BooksStoreObsevableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksStoreObsevableObject.swift; sourceTree = "<group>"; };
 		BB1B92D7299F9892005C3BD4 /* LatestBooksData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LatestBooksData.json; sourceTree = "<group>"; };
 		BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		BB1B92DB299FB657005C3BD4 /* LongTextComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextComponentView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC193D9299E4948006219CD /* BaseObservableObject.swift */,
+				BB0A943B29C8993F0066EFD4 /* BooksStoreObsevableObject.swift */,
 				BB1B92D9299FA145005C3BD4 /* BookDetailViewModel.swift */,
 			);
 			path = ObservableObjects;
@@ -663,6 +666,7 @@
 				BBA359F829BB83F7005A2F74 /* KeychainConfiguration.swift in Sources */,
 				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
 				BBA359F429BB8315005A2F74 /* DataEncryptionManager.swift in Sources */,
+				BB0A943C29C8993F0066EFD4 /* BooksStoreObsevableObject.swift in Sources */,
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
 				BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */,
 				BBA359F629BB83B5005A2F74 /* StorageKeys.swift in Sources */,
