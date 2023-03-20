@@ -53,7 +53,7 @@
 		BBA219F329C4A5DE00F02C77 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */; };
 		BBA359EA29BB575B005A2F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359E929BB575B005A2F74 /* Constants.swift */; };
 		BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */; };
-		BBA359F429BB8315005A2F74 /* UserCredentialStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */; };
+		BBA359F429BB8315005A2F74 /* DataEncryptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F329BB8315005A2F74 /* DataEncryptionManager.swift */; };
 		BBA359F629BB83B5005A2F74 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F529BB83B5005A2F74 /* StorageKeys.swift */; };
 		BBA359F829BB83F7005A2F74 /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F729BB83F7005A2F74 /* KeychainConfiguration.swift */; };
 		BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB6A22C2993FAB2005C0FF4 /* Libreria_TrantorApp.swift */; };
@@ -146,7 +146,7 @@
 		BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		BBA359E929BB575B005A2F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
-		BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialStorage.swift; sourceTree = "<group>"; };
+		BBA359F329BB8315005A2F74 /* DataEncryptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptionManager.swift; sourceTree = "<group>"; };
 		BBA359F529BB83B5005A2F74 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
 		BBA359F729BB83F7005A2F74 /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
 		BBB6A2292993FAB2005C0FF4 /* DDura Libreria Trantor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DDura Libreria Trantor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,7 +366,7 @@
 		BBA359F229BB8235005A2F74 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				BBA359F329BB8315005A2F74 /* UserCredentialStorage.swift */,
+				BBA359F329BB8315005A2F74 /* DataEncryptionManager.swift */,
 				BBA359F529BB83B5005A2F74 /* StorageKeys.swift */,
 				BBA359F729BB83F7005A2F74 /* KeychainConfiguration.swift */,
 			);
@@ -662,7 +662,7 @@
 				BB424B0E299CF5760061A5C3 /* User.swift in Sources */,
 				BBA359F829BB83F7005A2F74 /* KeychainConfiguration.swift in Sources */,
 				BB424AEA299BE1EA0061A5C3 /* NetworkStatus.swift in Sources */,
-				BBA359F429BB8315005A2F74 /* UserCredentialStorage.swift in Sources */,
+				BBA359F429BB8315005A2F74 /* DataEncryptionManager.swift in Sources */,
 				BB424B02299CD9A60061A5C3 /* NetworkError.swift in Sources */,
 				BB3A7D9329A4C8F3009714A3 /* AccountView.swift in Sources */,
 				BBA359F629BB83B5005A2F74 /* StorageKeys.swift in Sources */,

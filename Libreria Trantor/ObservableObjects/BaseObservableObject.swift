@@ -42,7 +42,8 @@ class BaseObservableObject: ObservableObject {
         cartBooks = []
         readBooks = []
         lovedBooks = []
-        user = User.test
+        user = DataEncryptionManager.shared.get(key: .user, type: User.self) ?? User.test
+        screen = user.isLoged ?? false ? .userHome : .authentification
     }
     
     func fetchAuthorName(from book: BookModel) -> String? {
@@ -84,8 +85,10 @@ class BaseObservableObject: ObservableObject {
     }
     
     func loggedOut() {
+        
+        DataEncryptionManager.shared.cleanAll()
         screen = .authentification
-        //TODO: Remove user from data.
+        
     }
     
     @MainActor

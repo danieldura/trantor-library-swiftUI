@@ -9,7 +9,7 @@ import XCTest
 @testable import DDura_Libreria_Trantor
 
 final class StorageTest: XCTestCase {
-    let storage = Storage.shared
+    let storage = DataEncryptionManager.shared
     
     override func setUpWithError() throws {
        print("setUpWithError")
@@ -22,19 +22,21 @@ final class StorageTest: XCTestCase {
 
     func testSaveAndGet() {
         print("testSaveAndGet")
-        let userData = User.test
-        let key = StorageKeys.user
+        let testData = "HelloWorld"
+        let key = StorageKeys.test
             
         do {
-            try storage.save(userData, key: key)
-            let retrievedData:User? = storage.get(key: key, type: User.self)
+            try storage.save(testData, key: key)
+            let retrievedData = storage.get(key: key, type: String.self)
             
             XCTAssertNotNil(retrievedData)
-            XCTAssertEqual(retrievedData,userData)
+            XCTAssertEqual(retrievedData,testData)
             
         } catch {
             XCTFail("Failed to save item: \(error.localizedDescription)")
         }
+        
+        storage.cleanAll()
     }
     func testPerformanceExample() throws {
         print("testPerformanceExample")

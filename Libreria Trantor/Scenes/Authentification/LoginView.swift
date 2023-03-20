@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var account:AccountObservableObject
-//    @ObservedObject var account:AccountObservableObject
     
     @State var showLostPassword = false
     @State var email = ""

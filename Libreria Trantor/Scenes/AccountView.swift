@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AccountView: View {
-    @EnvironmentObject var vm:BaseObservableObject
+    @EnvironmentObject var vm:AccountObservableObject
     var body: some View {
         ScrollViewDDura(title: "My Account".localized, headerGradient: Gradient(colors:[.random,.random])) {
             VStack(alignment: .leading,spacing: 16) {
@@ -16,6 +16,9 @@ struct AccountView: View {
                 readedBooks
                 orderedBooks
                 ordersList
+                Button("Close session".localized, role: .destructive) {
+                    vm.loggedOut()
+                }
             }
         }
     }

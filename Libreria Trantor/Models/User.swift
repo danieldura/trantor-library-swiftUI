@@ -29,7 +29,7 @@ struct User: Codable, Hashable, Identifiable {
     }
     
     static var test:User {
-        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test], orders: [.test], isLoged: true)
+        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test], orders: [.test], isLoged: false)
     }
     
     enum UserRole:String, CaseIterable, Codable {

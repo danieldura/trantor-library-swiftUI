@@ -69,11 +69,11 @@ final class AccountObservableObject:BaseObservableObject {
         do {
             let request = AuthenticationRequest.login(User(id: 0, email: email))
             user = try await networkClient.doRequest(request:request)
-//            try Storage.shared.save(user, key: .user)
+            user.isLoged = true
+            try DataEncryptionManager.shared.save(user, key: .user)
             
             self.authenticationState = .loggedIn
             screen = .userHome
-            user.isLoged = true
             
         } catch let error as NetworkError {
             self.showNetworkError(error)
