@@ -52,8 +52,9 @@ final class BooksStoreObservableObject:BaseObservableObject {
         }
     }
     
-    func makeOrder(){
-        
+    func makeOrder() async {
+        let order = OrderModel(id: <#T##UUID#>, state: <#T##OrderStatus#>, email: <#T##String#>, books: <#T##Books#>, date: <#T##Date#>)
+        let response = try await NetworkClient().doRequest(request: ShopRequest.newOrder())
     }
     
     func isBookInCart(_ book: BookModel) -> Bool {

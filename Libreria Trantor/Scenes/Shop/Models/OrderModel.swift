@@ -13,7 +13,7 @@ struct OrderModel: Codable, Hashable, Identifiable {
     let id:UUID
     let state:OrderStatus
     let email:String
-    let books:Books
+    let books:[Int]
     let date:Date
     
     
@@ -24,7 +24,7 @@ struct OrderModel: Codable, Hashable, Identifiable {
     }
     
     static var test:OrderModel {
-        OrderModel(id: UUID(), state: .received, email: "hola@ddura.es", books: [BookModel.test], date: Date())
+        OrderModel(id: UUID(), state: .received, email: "hola@ddura.es", books: [1,2,3], date: Date())
     }
 }
 
