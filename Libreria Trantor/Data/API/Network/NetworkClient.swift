@@ -60,6 +60,4 @@ final class NetworkClient:NetworkClientProtocol {
     }
 }
 
-struct EmptyResponse: Codable {
-    public init() {}
-}
+

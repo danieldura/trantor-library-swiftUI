@@ -17,6 +17,7 @@ struct User: Codable, Hashable, Identifiable {
     var readBooks: Books?
     var orderedBooks: Books?
     var orders:orders?
+    var cartBooks:Books?
     var isLoged:Bool? {
         didSet(oldValue){
             //Save in Storage
@@ -29,7 +30,7 @@ struct User: Codable, Hashable, Identifiable {
     }
     
     static var test:User {
-        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test], orders: [.test], isLoged: false)
+        User(id: 1, email: "hola@ddura.es", role:.admin, location: "Altea",name: "Dani", favoriteBooks: [.test], readBooks: [.test],orderedBooks: [.test], orders: [.test],cartBooks: [.test], isLoged: false)
     }
     
     enum UserRole:String, CaseIterable, Codable {

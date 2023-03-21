@@ -28,8 +28,7 @@ class DataEncryptionManager {
             let sealedBox = try AES.GCM.seal(data, using: symmetricKey)
             if let encryptedData = sealedBox.combined {
                 try saveData(encryptedData, key: key)
-                try saveSymetricKey(symmetricKey)
-                
+                print("Save data encrypted \(key.rawValue)")
             } else {
                 throw StorageError.savingFailed
             }
@@ -135,7 +134,9 @@ private extension DataEncryptionManager {
     }
     private func readSymmetricKey()-> SymmetricKey {
         guard let symmetricKeyData = read(.symmetrickey) else {
-            return SymmetricKey(size: .bits256)
+            let newSymmetricKey = SymmetricKey(size: .bits256)
+            try! saveSymetricKey(newSymmetricKey)
+            return newSymmetricKey
         }
         return SymmetricKey(data: symmetricKeyData)
     }

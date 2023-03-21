@@ -69,6 +69,7 @@
 		BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193DB299E4CC1006219CD /* AppDelegate.swift */; };
 		BBC567F029BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */; };
 		BBC567F229BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */; };
+		BBD3C75B29C9D3F3009EFF4E /* EmptyAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */; };
 		BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		BBC567ED29BCA6E600F69152 /* DDura Libreria TrantorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DDura Libreria TrantorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITests.swift; sourceTree = "<group>"; };
 		BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAPIResponse.swift; sourceTree = "<group>"; };
 		BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,11 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				BB3A7D9429A4E16C009714A3 /* AccountObservableObject.swift */,
-				BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */,
 				BB1C24B729A7A4B200714A4C /* SignUp */,
 				BB1C24B629A7A4AA00714A4C /* Login */,
-				BB1C24B029A79E1C00714A4C /* LoginView.swift */,
-				BB1C24B229A79E3300714A4C /* RegistrationView.swift */,
 				BB1C24B429A79E5700714A4C /* AccountRecoveryView.swift */,
 			);
 			path = Authentification;
@@ -218,6 +217,7 @@
 		BB1C24B629A7A4AA00714A4C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BB1C24B029A79E1C00714A4C /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -225,6 +225,7 @@
 		BB1C24B729A7A4B200714A4C /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				BB1C24B229A79E3300714A4C /* RegistrationView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -258,15 +259,11 @@
 		BB424AE4299BC93D0061A5C3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BBD3C75429C9C51A009EFF4E /* Shop */,
 				BB1C24AE29A79DE600714A4C /* Authentification */,
-				BB4BA609299E7934007095C6 /* Details */,
 				BB424AEB299BEF460061A5C3 /* Components */,
 				BB424B11299D09680061A5C3 /* AppTabView.swift */,
 				BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */,
-				BB4BA600299E5CC5007095C6 /* ListBooksView.swift */,
-				BB4BA60A299E7B1A007095C6 /* ReadBooksListView.swift */,
-				BB3A7D9229A4C8F3009714A3 /* AccountView.swift */,
-				BB3A7D9829A5149A009714A3 /* CartView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -284,10 +281,7 @@
 		BB424AE6299BC95D0061A5C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BB424B07299CF1450061A5C3 /* BookModel.swift */,
-				BB424B09299CF4A10061A5C3 /* AuthorModel.swift */,
 				BB424B0D299CF5760061A5C3 /* User.swift */,
-				BB424B0F299CFCB60061A5C3 /* OrderModel.swift */,
 				BBC193D5299E42C6006219CD /* ModelPersistence.swift */,
 				BB24932529B65A61007E7932 /* ModelDefinition.swift */,
 			);
@@ -465,6 +459,53 @@
 			path = "DDura Libreria TrantorUITests";
 			sourceTree = "<group>";
 		};
+		BBD3C75429C9C51A009EFF4E /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				BBD3C75729C9D298009EFF4E /* Models */,
+				BB4BA609299E7934007095C6 /* Details */,
+				BB4BA600299E5CC5007095C6 /* ListBooksView.swift */,
+				BB4BA60A299E7B1A007095C6 /* ReadBooksListView.swift */,
+				BB3A7D9229A4C8F3009714A3 /* AccountView.swift */,
+				BB3A7D9829A5149A009714A3 /* CartView.swift */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		BBD3C75729C9D298009EFF4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB424B09299CF4A10061A5C3 /* AuthorModel.swift */,
+				BB424B07299CF1450061A5C3 /* BookModel.swift */,
+				BB424B0F299CFCB60061A5C3 /* OrderModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBD3C75829C9D36E009EFF4E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BBD3C75929C9D398009EFF4E /* Reponses */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BBD3C75929C9D398009EFF4E /* Reponses */ = {
+			isa = PBXGroup;
+			children = (
+				BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */,
+			);
+			path = Reponses;
+			sourceTree = "<group>";
+		};
+		BBD3C75C29C9D510009EFF4E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		BBDD00F929B9EE6E00A41F99 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +518,8 @@
 		BBDD00FA29B9EE7600A41F99 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				BBD3C75C29C9D510009EFF4E /* Request */,
+				BBD3C75829C9D36E009EFF4E /* Entities */,
 				BB424AE8299BDFB40061A5C3 /* Network */,
 				BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */,
 			);
@@ -706,6 +749,7 @@
 				BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */,
 				BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */,
 				BB1C24B129A79E1C00714A4C /* LoginView.swift in Sources */,
+				BBD3C75B29C9D3F3009EFF4E /* EmptyAPIResponse.swift in Sources */,
 				BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */,
 				BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */,
 				BB424B06299CE1AA0061A5C3 /* NetworkClient.swift in Sources */,

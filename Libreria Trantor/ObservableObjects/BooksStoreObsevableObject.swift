@@ -40,9 +40,6 @@ final class BooksStoreObservableObject:BaseObservableObject {
         authors.first(where: {$0.id == book.author})?.name
     }
 
-    func addToCart(book:BookModel){
-        cartBooks.append(book)
-    }
     func removeFromCart(book:BookModel){
         cartBooks = cartBooks.filter { $0.id != book.id }
     }

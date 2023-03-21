@@ -11,7 +11,7 @@ typealias orders = [OrderModel]
 struct OrderModel: Codable, Hashable, Identifiable {
 
     let id:UUID
-    let state:String
+    let state:OrderStatus
     let email:String
     let books:Books
     let date:Date
@@ -24,6 +24,16 @@ struct OrderModel: Codable, Hashable, Identifiable {
     }
     
     static var test:OrderModel {
-        OrderModel(id: UUID(), state: "recibido", email: "hola@ddura.es", books: [BookModel.test], date: Date())
+        OrderModel(id: UUID(), state: .received, email: "hola@ddura.es", books: [BookModel.test], date: Date())
     }
+}
+
+enum OrderStatus: String, Codable, CaseIterable, Identifiable {
+    var id: Self { return self }
+    case received = "recibido"
+    case processing = "procesando"
+    case sent = "enviado"
+    case delivered = "entregado"
+    case returned = "devuelto"
+    case canceled = "anulado"
 }
