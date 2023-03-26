@@ -37,3 +37,8 @@ enum OrderStatus: String, Codable, CaseIterable, Identifiable {
     case returned = "devuelto"
     case canceled = "anulado"
 }
+
+struct NewOrder:Codable {
+    let email:String
+    let pedido:[Int]
+}

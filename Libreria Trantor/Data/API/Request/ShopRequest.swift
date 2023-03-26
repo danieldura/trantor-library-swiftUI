@@ -8,7 +8,7 @@
 import Foundation
 
 enum ShopRequest {
-    case newOrder(OrderModel)
+    case newOrder(NewOrder)
     case orders(User)
 }
 

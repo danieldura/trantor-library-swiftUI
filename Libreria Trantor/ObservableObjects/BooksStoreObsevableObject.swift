@@ -51,10 +51,26 @@ final class BooksStoreObservableObject:BaseObservableObject {
             cartBooks.append(book)
         }
     }
-    
+    @MainActor
     func makeOrder() async {
-        let order = OrderModel(id: <#T##UUID#>, state: <#T##OrderStatus#>, email: <#T##String#>, books: <#T##Books#>, date: <#T##Date#>)
-        let response = try await NetworkClient().doRequest(request: ShopRequest.newOrder())
+        if cartBooks.isEmpty { return }
+        
+//        let order = OrderModel(id: <#T##UUID#>, state: <#T##OrderStatus#>, email: <#T##String#>, books: <#T##Books#>, date: <#T##Date#>)
+        let newOrder = NewOrder(email: user.email, pedido: cartBooks.map { $0.id })
+        do {
+            let orderResponse:OrderModel = try await NetworkClient().doRequest(request: ShopRequest.newOrder(newOrder))
+            cleanCart()
+        } catch let error as NetworkError {
+            errorMsg = error.localizedDescription
+            showNetworkError(error)
+        } catch {
+            print(error)
+        }
+        
+    }
+    
+    func cleanCart() {
+        cartBooks.removeAll()
     }
     
     func isBookInCart(_ book: BookModel) -> Bool {

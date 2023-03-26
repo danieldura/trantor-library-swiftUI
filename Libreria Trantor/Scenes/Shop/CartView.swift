@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CartView: View {
     @EnvironmentObject var vm: BooksStoreObservableObject
-    
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         
@@ -26,7 +26,7 @@ struct CartView: View {
                 }
                 .padding()
                 
-                ApplePayButtonComponentView(action: vm.makeOrder)
+                ApplePayButtonComponentView(action: makeOrder )
                     .padding()
             }else {
                 VStack(spacing:10) {
@@ -40,10 +40,15 @@ struct CartView: View {
             
         }.navigationTitle(Text("My Order"))
             .padding(.top)
-            .onDisappear {
-                vm.makeOrder()
-            }
+//            .onDisappear {
+//                makeOrder()
+//            }
         
+    }
+    func makeOrder() {
+        Task {
+            await vm.makeOrder()
+        }
     }
 }
 
