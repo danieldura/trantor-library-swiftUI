@@ -34,7 +34,7 @@ struct CartViewRow: View {
             Image(systemName: "trash")
                 .foregroundColor(.red)
                 .onTapGesture {
-                    vm.removeFromCart(book: book)
+                    vm.toggleBookOnCart(book: book)
                 }
         }
         .padding(.horizontal)

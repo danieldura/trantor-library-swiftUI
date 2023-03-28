@@ -40,9 +40,6 @@ final class BooksStoreObservableObject:BaseObservableObject {
         authors.first(where: {$0.id == book.author})?.name
     }
 
-    func removeFromCart(book:BookModel){
-        cartBooks = cartBooks.filter { $0.id != book.id }
-    }
     
     func toggleBookOnCart(book:BookModel) {
         if cartBooks.contains(where: { $0 == book}) {
@@ -86,8 +83,37 @@ final class BooksStoreObservableObject:BaseObservableObject {
         }
     }
     
+    @MainActor
+    func fetchReadAndOrderedBooks () async {
+        do {
+            let readAndOrderedBooks:ClientReportResponse = try await NetworkClient().doRequest(request: ClientRequest.report(user))
+            let readBooksFromNetwork = getBooksFromIDs(booksIDs: readAndOrderedBooks.readed ?? [])
+            let orderedBooksFromNetwork = getBooksFromIDs(booksIDs: readAndOrderedBooks.ordered ?? [])
+            user.readBooks = readBooksFromNetwork
+            readBooks = readBooksFromNetwork
+            user.orderedBooks = orderedBooksFromNetwork
+            saveUserData()
+            
+        } catch let error as NetworkError {
+            errorMsg = error.localizedDescription
+            showNetworkError(error)
+        } catch {
+            print(error)
+        }
+    }
+    
     func cleanCart() {
         cartBooks.removeAll()
+    }
+    
+    func getBooksFromIDs(booksIDs: [Int]) -> Books {
+        booksIDs.compactMap { idBook in
+            getBookFromID(bookID: idBook)
+        }
+    }
+    
+    func getBookFromID(bookID: Int) -> BookModel? {
+        books.first { $0.id == bookID }
     }
     
     func isBookInCart(_ book: BookModel) -> Bool {

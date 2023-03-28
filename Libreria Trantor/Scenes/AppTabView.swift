@@ -26,7 +26,7 @@ struct AppTabView: View {
                 }
         }
         .task {
-            _ = await (store.fetchOrders())
+            _ = await (store.fetchOrders(), store.fetchReadAndOrderedBooks())
             
         }
     }

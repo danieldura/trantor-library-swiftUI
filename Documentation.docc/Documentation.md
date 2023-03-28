@@ -17,6 +17,11 @@ first view:
 -- download orders (https://trantorapi-acacademy.herokuapp.com/api/shop/orders)
 
 
+# Decisions
+
+## Networking:
+https://www.youtube.com/watch?v=xV2DVQ8sw7o
+
 
 
 - <!--@START_MENU_TOKEN@-->``Symbol``<!--@END_MENU_TOKEN@-->
