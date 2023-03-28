@@ -73,6 +73,7 @@
 		BBD3C75E29C9D8A9009EFF4E /* ShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */; };
 		BBD3C76029C9FF21009EFF4E /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */; };
 		BBD75AD329D2FD520013A548 /* ClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD75AD229D2FD520013A548 /* ClientRequest.swift */; };
+		BBD75AD529D304C00013A548 /* ClientReportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD75AD429D304C00013A548 /* ClientReportResponse.swift */; };
 		BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +175,7 @@
 		BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequest.swift; sourceTree = "<group>"; };
 		BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		BBD75AD229D2FD520013A548 /* ClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequest.swift; sourceTree = "<group>"; };
+		BBD75AD429D304C00013A548 /* ClientReportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientReportResponse.swift; sourceTree = "<group>"; };
 		BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -501,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */,
+				BBD75AD429D304C00013A548 /* ClientReportResponse.swift */,
 			);
 			path = Reponses;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				BB424AED299BEF9F0061A5C3 /* AppOfflineView.swift in Sources */,
 				BBB6A22D2993FAB2005C0FF4 /* Libreria_TrantorApp.swift in Sources */,
 				BB424B12299D09680061A5C3 /* AppTabView.swift in Sources */,
+				BBD75AD529D304C00013A548 /* ClientReportResponse.swift in Sources */,
 				BB4BA601299E5CC5007095C6 /* ListBooksView.swift in Sources */,
 				BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */,
 				BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */,
