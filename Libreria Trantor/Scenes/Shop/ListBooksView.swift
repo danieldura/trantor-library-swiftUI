@@ -14,7 +14,7 @@ struct ListBooksView: View {
         NavigationStack {
             List(vm.filteredBooks) { book in
                 NavigationLink(value:book) {
-                    BookCell(book: book,authorName: vm.fetchAuthorName(from: book))
+                    BookCell(book: book)
                 }
                 .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                     Button {

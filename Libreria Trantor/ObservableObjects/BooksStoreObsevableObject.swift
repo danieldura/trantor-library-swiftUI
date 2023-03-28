@@ -22,12 +22,12 @@ final class BooksStoreObservableObject:BaseObservableObject {
     var filteredBooks: Books {
         searchText.isEmpty ? books : books.filter { $0.title.lowercased().contains(searchText.lowercased()) }
     }
-        
-        
+    var orderedBooks: Books = []
+    
     override init() {
         super.init()
         authors = self.persistence.fetchAuthors()
-        books = self.persistence.fetchBooks()
+        books = getBookList(list:self.persistence.fetchBooks())
         latestBooks = self.persistence.fetchBooks(url: .latestBooksDataURL)
         suggestedBooks = latestBooks.shuffled().suffix(3)
         searchedBooks = latestBooks.shuffled().suffix(3)
@@ -50,6 +50,16 @@ final class BooksStoreObservableObject:BaseObservableObject {
         user.cartBooks = cartBooks
         saveUserData()
     }
+    private func getBookList(list:Books) -> Books {
+        list.map { book in
+            var book = book
+            book.authorString = authors.first(where: { $0.id == book.author })?.name
+            book.read = readBooks.contains(book)
+            book.purchased = orderedBooks.contains(book)
+            return book
+        }
+    }
+    
     @MainActor
     func makeOrder() async {
         if cartBooks.isEmpty { return }
@@ -92,6 +102,7 @@ final class BooksStoreObservableObject:BaseObservableObject {
             user.readBooks = readBooksFromNetwork
             readBooks = readBooksFromNetwork
             user.orderedBooks = orderedBooksFromNetwork
+            orderedBooks = orderedBooksFromNetwork
             saveUserData()
             
         } catch let error as NetworkError {
@@ -126,6 +137,8 @@ final class BooksStoreObservableObject:BaseObservableObject {
         } else {
             readBooks.append(book)
         }
+        user.readBooks = readBooks
+        saveUserData()
     }
     func isReadedBook(_ book: BookModel) -> Bool {
         readBooks.contains(where: { $0 == book })

@@ -9,14 +9,13 @@ import SwiftUI
 
 struct BookCell: View {
     let book:BookModel
-    let authorName:String?
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(book.title)
                     .font(.headline)
-                if let authorName = authorName {
+                if let authorName = book.authorString {
                     Text(authorName)
                 }
                 HStack{
@@ -43,11 +42,12 @@ struct BookCell: View {
                     .frame(width: 70)
             }
         }
+        .background(book.read ?? false ? Color.red : Color.clear)
     }
 }
 
 struct BookCell_Previews: PreviewProvider {
     static var previews: some View {
-        BookCell(book: .test,authorName: "Hello")
+        BookCell(book: .test)
     }
 }
