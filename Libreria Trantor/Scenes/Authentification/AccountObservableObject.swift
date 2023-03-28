@@ -70,7 +70,7 @@ final class AccountObservableObject:BaseObservableObject {
             let request = AuthenticationRequest.login(User(id: 0, email: email))
             user = try await networkClient.doRequest(request:request)
             user.isLoged = true
-            try DataEncryptionManager.shared.save(user, key: .user)
+            saveUserData()
             
             self.authenticationState = .loggedIn
             screen = .userHome

@@ -45,4 +45,12 @@ class BaseObservableObject: ObservableObject {
             print("default error")
         }
     }
+    func saveUserData() {
+        do{
+            try DataEncryptionManager.shared.save(user, key: .user)
+        }catch {
+            print("Error savind Data: \(error)")
+        }
+        
+    }
 }

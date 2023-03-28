@@ -50,6 +50,8 @@ final class BooksStoreObservableObject:BaseObservableObject {
         } else {
             cartBooks.append(book)
         }
+        user.cartBooks = cartBooks
+        saveUserData()
     }
     @MainActor
     func makeOrder() async {
@@ -59,8 +61,8 @@ final class BooksStoreObservableObject:BaseObservableObject {
         do {
             let orderResponse:OrderModel = try await NetworkClient().doRequest(request: ShopRequest.newOrder(newOrder))
             user.orders?.append(orderResponse)
-            try DataEncryptionManager.shared.save(user, key: .user)
             cleanCart()
+            saveUserData()
         } catch let error as NetworkError {
             errorMsg = error.localizedDescription
             showNetworkError(error)
@@ -75,7 +77,7 @@ final class BooksStoreObservableObject:BaseObservableObject {
         do {
             let orders:Orders = try await NetworkClient().doRequest(request: ShopRequest.orders(user))
             user.orders = orders
-            try DataEncryptionManager.shared.save(user, key: .user)
+            saveUserData()
         } catch let error as NetworkError {
             errorMsg = error.localizedDescription
             showNetworkError(error)

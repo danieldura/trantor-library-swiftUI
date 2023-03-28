@@ -9,7 +9,7 @@ import Foundation
 typealias Orders = [OrderModel]
 
 struct OrderModel: Codable, Hashable, Identifiable {
-    let id:UUID?
+    let id:UUID = UUID()
     let idAPI:String
     let state:OrderStatus
     let email:String
@@ -24,7 +24,7 @@ struct OrderModel: Codable, Hashable, Identifiable {
     }
     
     static var test:OrderModel {
-        OrderModel(id: UUID(), idAPI: "E627160D-3862-4513-9D8F-38B4E74D06E8", state: .received, email: "hola@ddura.es", books: [1,2,3], date: Date())
+        OrderModel(idAPI: "E627160D-3862-4513-9D8F-38B4E74D06E8", state: .received, email: "hola@ddura.es", books: [1,2,3], date: Date())
     }
 }
 
