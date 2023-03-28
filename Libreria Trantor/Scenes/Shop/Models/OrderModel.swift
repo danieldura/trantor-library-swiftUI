@@ -6,11 +6,11 @@
 //
 
 import Foundation
-typealias orders = [OrderModel]
+typealias Orders = [OrderModel]
 
 struct OrderModel: Codable, Hashable, Identifiable {
-
-    let id:UUID
+    let id:UUID?
+    let idAPI:String
     let state:OrderStatus
     let email:String
     let books:[Int]
@@ -18,13 +18,13 @@ struct OrderModel: Codable, Hashable, Identifiable {
     
     
     enum CodingKeys: String, CodingKey {
-        case id = "npedido"
+        case idAPI = "npedido"
         case state = "estado"
-        case email, books, date
+        case email, books, date, id
     }
     
     static var test:OrderModel {
-        OrderModel(id: UUID(), state: .received, email: "hola@ddura.es", books: [1,2,3], date: Date())
+        OrderModel(id: UUID(), idAPI: "E627160D-3862-4513-9D8F-38B4E74D06E8", state: .received, email: "hola@ddura.es", books: [1,2,3], date: Date())
     }
 }
 

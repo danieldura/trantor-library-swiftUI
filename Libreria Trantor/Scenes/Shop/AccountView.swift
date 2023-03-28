@@ -19,6 +19,8 @@ struct AccountView: View {
                 Button("Close session".localized, role: .destructive) {
                     vm.loggedOut()
                 }
+            }.onAppear {
+                
             }
         }
     }

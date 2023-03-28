@@ -35,8 +35,8 @@ final class NetworkClient:NetworkClientProtocol {
                 do {
                     let decodedData = try decodeResponse(data: data, dataType: T.self)
                     return decodedData
-                } catch {
-                    print("Error de decodificación: \(error.localizedDescription)")
+                } catch let error {
+                    print("Error de decodificación: \(error)")
                     throw NetworkError.encodingError
                 }
             }else{

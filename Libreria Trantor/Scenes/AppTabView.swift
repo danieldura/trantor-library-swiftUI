@@ -25,12 +25,16 @@ struct AppTabView: View {
                     Label("Account".localized,systemImage: "person")
                 }
         }
+        .task {
+            _ = await (store.fetchOrders())
+            
+        }
     }
 }
 
 struct AppTabView_Previews: PreviewProvider {
     static var previews: some View {
         AppTabView()
-            .environmentObject(BaseObservableObject())
+            .environmentObject(BooksStoreObservableObject())
     }
 }

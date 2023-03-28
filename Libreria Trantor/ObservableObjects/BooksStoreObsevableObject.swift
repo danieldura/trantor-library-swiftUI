@@ -31,8 +31,8 @@ final class BooksStoreObservableObject:BaseObservableObject {
         latestBooks = self.persistence.fetchBooks(url: .latestBooksDataURL)
         suggestedBooks = latestBooks.shuffled().suffix(3)
         searchedBooks = latestBooks.shuffled().suffix(3)
-        cartBooks = []
-        readBooks = []
+        cartBooks = user.cartBooks ?? []
+        readBooks = user.readBooks ?? []
         lovedBooks = []
     }
     
@@ -55,10 +55,11 @@ final class BooksStoreObservableObject:BaseObservableObject {
     func makeOrder() async {
         if cartBooks.isEmpty { return }
         
-//        let order = OrderModel(id: <#T##UUID#>, state: <#T##OrderStatus#>, email: <#T##String#>, books: <#T##Books#>, date: <#T##Date#>)
         let newOrder = NewOrder(email: user.email, pedido: cartBooks.map { $0.id })
         do {
             let orderResponse:OrderModel = try await NetworkClient().doRequest(request: ShopRequest.newOrder(newOrder))
+            user.orders?.append(orderResponse)
+            try DataEncryptionManager.shared.save(user, key: .user)
             cleanCart()
         } catch let error as NetworkError {
             errorMsg = error.localizedDescription
@@ -67,6 +68,20 @@ final class BooksStoreObservableObject:BaseObservableObject {
             print(error)
         }
         
+    }
+    
+    @MainActor
+    func fetchOrders() async {
+        do {
+            let orders:Orders = try await NetworkClient().doRequest(request: ShopRequest.orders(user))
+            user.orders = orders
+            try DataEncryptionManager.shared.save(user, key: .user)
+        } catch let error as NetworkError {
+            errorMsg = error.localizedDescription
+            showNetworkError(error)
+        } catch {
+            print(error)
+        }
     }
     
     func cleanCart() {

@@ -49,6 +49,7 @@ class DataEncryptionManager {
         }
         let symmetricKey = SymmetricKey(data: symmetricKeyData)
         
+        print("Read encrypted Data \(key.rawValue)")
         do {
             let sealedBox = try AES.GCM.SealedBox(combined: data)
             let decryptedData = try AES.GCM.open(sealedBox, using: symmetricKey)

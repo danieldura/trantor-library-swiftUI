@@ -14,12 +14,11 @@ class BaseObservableObject: ObservableObject {
     @Published var errorMsg = ""
     @Published var showAlert = false
     
-    @Published var user:User
+    @Published var user:User = DataEncryptionManager.shared.get(key: .user, type: User.self) ?? User.test
     @Published var screen:Screens = .authentification
     
     
     init() {
-        user = DataEncryptionManager.shared.get(key: .user, type: User.self) ?? User.test
         screen = user.isLoged ?? false ? .userHome : .authentification
     }
     

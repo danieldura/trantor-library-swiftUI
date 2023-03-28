@@ -16,7 +16,7 @@ struct User: Codable, Hashable, Identifiable {
     var favoriteBooks: Books?
     var readBooks: Books?
     var orderedBooks: Books?
-    var orders:orders?
+    var orders:Orders?
     var cartBooks:Books?
     var isLoged:Bool? {
         didSet(oldValue){
