@@ -55,7 +55,7 @@ final class NetworkClient:NetworkClientProtocol {
     }
     func decodeResponse<T: Decodable>(data: Data, dataType: T.Type) throws -> T {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(.jsonFormatter)
+        decoder.dateDecodingStrategy = .iso8601
         return try decoder.decode(T.self, from: data)
     }
 }

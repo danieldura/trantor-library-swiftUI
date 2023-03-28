@@ -51,7 +51,6 @@
 		BB63DC2E29C1D356002A6078 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC2D29C1D356002A6078 /* Tests.swift */; };
 		BB63DC3529C1D378002A6078 /* StorageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC3429C1D378002A6078 /* StorageTest.swift */; };
 		BB63DC3829C1D9C1002A6078 /* TestStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63DC3729C1D9C1002A6078 /* TestStrings.swift */; };
-		BBA219F329C4A5DE00F02C77 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */; };
 		BBA359EA29BB575B005A2F74 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359E929BB575B005A2F74 /* Constants.swift */; };
 		BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */; };
 		BBA359F429BB8315005A2F74 /* DataEncryptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA359F329BB8315005A2F74 /* DataEncryptionManager.swift */; };
@@ -150,7 +149,6 @@
 		BB63DC2D29C1D356002A6078 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		BB63DC3429C1D378002A6078 /* StorageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTest.swift; sourceTree = "<group>"; };
 		BB63DC3729C1D9C1002A6078 /* TestStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStrings.swift; sourceTree = "<group>"; };
-		BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		BBA359E929BB575B005A2F74 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRequest.swift; sourceTree = "<group>"; };
 		BBA359F329BB8315005A2F74 /* DataEncryptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptionManager.swift; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 			children = (
 				BB3B64A229A3C70B005D41CF /* String+Extension.swift */,
 				BB34152429A606ED007C0A65 /* Color+Extension.swift */,
-				BBA219F229C4A5DE00F02C77 /* DateFormatter+Extension.swift */,
 				BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */,
 			);
 			path = Extensions;
@@ -730,7 +727,6 @@
 				BB4BA606299E651A007095C6 /* RatingView.swift in Sources */,
 				BB34152B29A62745007C0A65 /* ApplePayHandler.swift in Sources */,
 				BBB6A22F2993FAB2005C0FF4 /* ScrollViewDDura.swift in Sources */,
-				BBA219F329C4A5DE00F02C77 /* DateFormatter+Extension.swift in Sources */,
 				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
 				BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */,
 				BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */,
