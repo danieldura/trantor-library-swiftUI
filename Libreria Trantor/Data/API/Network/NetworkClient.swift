@@ -9,15 +9,15 @@ import Foundation
 
 
 protocol NetworkClientProtocol {
-    func doRequest<T:Decodable>(request:APIRequestDelegate) async throws -> T
+    func doRequest<T:Decodable>(request:APIRequestable) async throws -> T
 }
 
 final class NetworkClient:NetworkClientProtocol {
-    func doRequest<T:Decodable>(request: APIRequestDelegate) async throws -> T {
+    func doRequest<T:Decodable>(request: APIRequestable) async throws -> T {
         try await fetch(apiRequest: request)
     }
     
-    func fetch<T:Decodable>(apiRequest:APIRequestDelegate) async throws -> T {
+    func fetch<T:Decodable>(apiRequest:APIRequestable) async throws -> T {
         do {
             let networkRequest = APIRequest(apiRequest: apiRequest)
             print(networkRequest.request)

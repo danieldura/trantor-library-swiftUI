@@ -12,7 +12,7 @@ enum ShopRequest {
     case orders(User)
 }
 
-extension ShopRequest: APIRequestDelegate {
+extension ShopRequest: APIRequestable {
     var serviceName: String {
         switch self {
         case .orders: return "orders"

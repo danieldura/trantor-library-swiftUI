@@ -72,6 +72,7 @@
 		BBD3C75B29C9D3F3009EFF4E /* EmptyAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */; };
 		BBD3C75E29C9D8A9009EFF4E /* ShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */; };
 		BBD3C76029C9FF21009EFF4E /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */; };
+		BBD75AD329D2FD520013A548 /* ClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD75AD229D2FD520013A548 /* ClientRequest.swift */; };
 		BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,7 @@
 		BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAPIResponse.swift; sourceTree = "<group>"; };
 		BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequest.swift; sourceTree = "<group>"; };
 		BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		BBD75AD229D2FD520013A548 /* ClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequest.swift; sourceTree = "<group>"; };
 		BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -508,6 +510,7 @@
 			children = (
 				BBA359EF29BB6B71005A2F74 /* AuthenticationRequest.swift */,
 				BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */,
+				BBD75AD229D2FD520013A548 /* ClientRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				BB424B06299CE1AA0061A5C3 /* NetworkClient.swift in Sources */,
 				BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */,
 				BB1C24B329A79E3300714A4C /* RegistrationView.swift in Sources */,
+				BBD75AD329D2FD520013A548 /* ClientRequest.swift in Sources */,
 				BBD3C75E29C9D8A9009EFF4E /* ShopRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

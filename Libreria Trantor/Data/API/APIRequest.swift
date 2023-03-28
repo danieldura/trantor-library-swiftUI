@@ -7,8 +7,7 @@
 
 import Foundation
 
-protocol APIRequestDelegate {
-    var serviceName: String { get }
+protocol APIRequestable {
     var url:String? { get }
     var subPath:String { get }
     var path:String { get }
@@ -19,7 +18,7 @@ protocol APIRequestDelegate {
     var isTimeOutIgnorable: Bool { get }
 }
 
-extension APIRequestDelegate {
+extension APIRequestable {
     var timeOut: TimeInterval { 10.0 }
     var url: String? { nil }
     var queryItems:[URLQueryItem]? { nil }
@@ -27,7 +26,7 @@ extension APIRequestDelegate {
 
 struct APIRequest {
     var request:URLRequest
-    init(apiRequest: APIRequestDelegate) {
+    init(apiRequest: APIRequestable) {
         var urlComponents = URLComponents(string: apiRequest.url?.description ?? K.baseURL)
         let subpath = urlComponents?.path.appending(apiRequest.subPath) ?? ""
         let path = subpath.appending(apiRequest.path)

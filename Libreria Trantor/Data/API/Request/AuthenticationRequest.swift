@@ -11,7 +11,7 @@ enum AuthenticationRequest {
     case login(User)
 }
 
-extension AuthenticationRequest: APIRequestDelegate {
+extension AuthenticationRequest: APIRequestable {
     var serviceName: String {
         switch self {
         case .login: return "user_login"
