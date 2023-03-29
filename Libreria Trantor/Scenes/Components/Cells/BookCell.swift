@@ -34,8 +34,6 @@ struct BookCell: View {
                     .background {
                         Color.gray.opacity(0.2)
                     }
-//                    .clipShape(Circle())
-                
             } placeholder: {
                 Image(systemName: "book.circle.fill")
                     .resizable()

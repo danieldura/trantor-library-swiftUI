@@ -12,7 +12,7 @@ final class BooksStoreObservableObject:BaseObservableObject {
     @Published private (set) var books: Books = []
     @Published var suggestedBooks: Books = []
     @Published var searchedBooks: Books = []
-    @Published private (set) var cartBooks: Books = []
+    @Published var cartBooks: Books = []
     @Published private (set) var readBooks: Books = []
     @Published private (set) var lovedBooks: Books = []
     
@@ -102,6 +102,7 @@ final class BooksStoreObservableObject:BaseObservableObject {
     
     func cleanCart() {
         cartBooks.removeAll()
+        user.cartBooks = []
     }
     
     func getBooksFromIDs(booksIDs: [Int]) -> Books {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CartView: View {
     @EnvironmentObject var vm: BooksStoreObservableObject
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         
@@ -17,7 +17,9 @@ struct CartView: View {
             if vm.cartBooks.count > 0 {
                 ForEach(vm.cartBooks, id: \.id) { book in
                     CartViewRow(book: book)
+                        .transition(.opacity)
                 }
+                .onDelete(perform: delete)
                 HStack {
                     Text("Your order total is".localized)
                     Spacer()
@@ -46,9 +48,14 @@ struct CartView: View {
         
     }
     func makeOrder() {
+        presentationMode.wrappedValue.dismiss()
         Task {
             await vm.makeOrder()
         }
+    }
+    
+    func delete(at offsets: IndexSet) {
+        vm.cartBooks.remove(atOffsets: offsets)
     }
 }
 
