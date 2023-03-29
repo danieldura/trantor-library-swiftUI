@@ -43,7 +43,9 @@ struct BookCell: View {
                     .frame(width: 70)
             }
         }
-        .background(book.read ?? false ? Color.red : Color.clear)
+        .background(book.read ?? false ? Color.green.opacity(0.1) : Color.clear)
+        .animation(.easeInOut,value: book.read)
+        
     }
 }
 
