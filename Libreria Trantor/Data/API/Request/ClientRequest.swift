@@ -9,6 +9,7 @@ import Foundation
 
 enum ClientRequest {
     case report(User)
+    case setReadBooks(ReadBooksModel)
 }
 
 extension ClientRequest:APIRequestable {
@@ -19,18 +20,21 @@ extension ClientRequest:APIRequestable {
     var path: String {
         switch self {
         case .report: return "/reportBooksUser"
+        case .setReadBooks: return "/readQuery"
         }
     }
     
     var method: HTTPMethods {
         switch self {
-        case .report: return .POST
+        case .report, .setReadBooks : return .POST
+            
         }
     }
     
     var params: Any? {
         switch self {
         case .report(let user): return ["email": user.email] as [String: String]
+        case .setReadBooks(let readBooksModel): return try? readBooksModel.toDictionary()
         }
     }
     

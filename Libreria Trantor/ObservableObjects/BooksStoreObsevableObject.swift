@@ -135,16 +135,27 @@ final class BooksStoreObservableObject:BaseObservableObject {
     
     
 // MARK: Read books
-    
-    func toggleReadBook(book:BookModel){
-        if readBooks.contains(where: { $0 == book}) {
-            readBooks.removeAll(where: { $0 == book})
-        } else {
-            readBooks.append(book)
+    @MainActor
+    func toggleReadBook(book:BookModel) {
+        Task {
+            let userReadBook = ReadBooksModel(email: user.email, books: [book.id])
+            do {
+                let _:EmptyResponse = try await NetworkClient().doRequest(request: ClientRequest.setReadBooks(userReadBook))
+                if readBooks.contains(where: { $0 == book}) {
+                    readBooks.removeAll(where: { $0 == book})
+                } else {
+                    readBooks.append(book)
+                }
+                books = updateBookReadStatus(list: books, bookToUpdate: book)
+                user.readBooks = readBooks
+                saveUserData()
+            } catch let error as NetworkError {
+                errorMsg = error.localizedDescription
+                showNetworkError(error)
+            } catch {
+                print(error)
+            }
         }
-        books = updateBookReadStatus(list: books, bookToUpdate: book)
-        user.readBooks = readBooks
-        saveUserData()
     }
     func isReadedBook(_ book: BookModel) -> Bool {
         readBooks.contains(where: { $0 == book })

@@ -68,6 +68,7 @@
 		BBC193DC299E4CC1006219CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC193DB299E4CC1006219CD /* AppDelegate.swift */; };
 		BBC567F029BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */; };
 		BBC567F229BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */; };
+		BBCDF4E229D47499004636CD /* ReadBooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF4E129D47499004636CD /* ReadBooksModel.swift */; };
 		BBD3C75B29C9D3F3009EFF4E /* EmptyAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */; };
 		BBD3C75E29C9D8A9009EFF4E /* ShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */; };
 		BBD3C76029C9FF21009EFF4E /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */; };
@@ -169,6 +170,7 @@
 		BBC567ED29BCA6E600F69152 /* DDura Libreria TrantorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DDura Libreria TrantorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITests.swift; sourceTree = "<group>"; };
 		BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBCDF4E129D47499004636CD /* ReadBooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBooksModel.swift; sourceTree = "<group>"; };
 		BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAPIResponse.swift; sourceTree = "<group>"; };
 		BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequest.swift; sourceTree = "<group>"; };
 		BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD3C75929C9D398009EFF4E /* Reponses */,
+				BBCDF4E129D47499004636CD /* ReadBooksModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */,
 				BB4BA604299E5D50007095C6 /* BookCell.swift in Sources */,
 				BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */,
+				BBCDF4E229D47499004636CD /* ReadBooksModel.swift in Sources */,
 				BB24932629B65A61007E7932 /* ModelDefinition.swift in Sources */,
 				BB1C24B529A79E5700714A4C /* AccountRecoveryView.swift in Sources */,
 				BB424B08299CF1450061A5C3 /* BookModel.swift in Sources */,
