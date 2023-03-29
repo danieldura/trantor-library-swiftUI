@@ -52,6 +52,9 @@ struct ListBooksView: View {
             .navigationDestination(for: BookModel.self) { book in
                 BookDetailView(vm: BookDetailViewModel(book: book))
             }
+            .refreshable {
+                await vm.fetchReadAndOrderedBooks()
+            }
         }
     }
 }

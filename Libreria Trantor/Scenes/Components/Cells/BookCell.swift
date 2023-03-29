@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct BookCell: View {
+struct BookCell: View {    
+    
     let book:BookModel
     
     var body: some View {

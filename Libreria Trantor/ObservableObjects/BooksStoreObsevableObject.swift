@@ -59,6 +59,13 @@ final class BooksStoreObservableObject:BaseObservableObject {
             return book
         }
     }
+    private func updateBookReadStatus(list:Books, bookToUpdate: BookModel) -> Books {
+        var books = list
+        if let index = list.firstIndex(where: { $0.id == bookToUpdate.id }) {
+            books[index].read = !(list[index].read ?? true)
+        }
+        return books
+    }
     
     @MainActor
     func makeOrder() async {
@@ -103,6 +110,7 @@ final class BooksStoreObservableObject:BaseObservableObject {
             readBooks = readBooksFromNetwork
             user.orderedBooks = orderedBooksFromNetwork
             orderedBooks = orderedBooksFromNetwork
+            books = getBookList(list: books)
             saveUserData()
             
         } catch let error as NetworkError {
@@ -137,6 +145,7 @@ final class BooksStoreObservableObject:BaseObservableObject {
         } else {
             readBooks.append(book)
         }
+        books = updateBookReadStatus(list: books, bookToUpdate: book)
         user.readBooks = readBooks
         saveUserData()
     }
