@@ -39,7 +39,6 @@ final class BooksStoreObservableObject:BaseObservableObject {
     func fetchAuthorName(from book: BookModel) -> String? {
         authors.first(where: {$0.id == book.author})?.name
     }
-
     
     func toggleBookOnCart(book:BookModel) {
         if cartBooks.contains(where: { $0 == book}) {
@@ -59,13 +58,7 @@ final class BooksStoreObservableObject:BaseObservableObject {
             return book
         }
     }
-    private func updateBookReadStatus(list:Books, bookToUpdate: BookModel) -> Books {
-        var books = list
-        if let index = list.firstIndex(where: { $0.id == bookToUpdate.id }) {
-            books[index].read = !(list[index].read ?? true)
-        }
-        return books
-    }
+
     
     @MainActor
     func makeOrder() async {
@@ -139,6 +132,10 @@ final class BooksStoreObservableObject:BaseObservableObject {
         cartBooks.contains(where: { $0 == book })
     }
     
+    
+    
+// MARK: Read books
+    
     func toggleReadBook(book:BookModel){
         if readBooks.contains(where: { $0 == book}) {
             readBooks.removeAll(where: { $0 == book})
@@ -151,5 +148,13 @@ final class BooksStoreObservableObject:BaseObservableObject {
     }
     func isReadedBook(_ book: BookModel) -> Bool {
         readBooks.contains(where: { $0 == book })
+    }
+    
+    private func updateBookReadStatus(list:Books, bookToUpdate: BookModel) -> Books {
+        var books = list
+        if let index = list.firstIndex(where: { $0.id == bookToUpdate.id }) {
+            books[index].read = !(list[index].read ?? true)
+        }
+        return books
     }
 }
