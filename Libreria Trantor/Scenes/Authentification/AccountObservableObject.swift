@@ -87,5 +87,4 @@ final class AccountObservableObject:BaseObservableObject {
         self.authenticationState = .authenticationFailed
         user.isLoged = false
     }
-    
 }
