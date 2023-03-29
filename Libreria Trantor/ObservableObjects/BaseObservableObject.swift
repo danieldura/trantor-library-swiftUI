@@ -53,4 +53,18 @@ class BaseObservableObject: ObservableObject {
         }
         
     }
+    
+    @MainActor
+    func fetchOrders() async {
+        do {
+            let orders:Orders = try await NetworkClient().doRequest(request: ShopRequest.orders(user))
+            user.orders = orders
+            saveUserData()
+        } catch let error as NetworkError {
+            errorMsg = error.localizedDescription
+            showNetworkError(error)
+        } catch {
+            print(error)
+        }
+    }
 }

@@ -80,20 +80,6 @@ final class BooksStoreObservableObject:BaseObservableObject {
     }
     
     @MainActor
-    func fetchOrders() async {
-        do {
-            let orders:Orders = try await NetworkClient().doRequest(request: ShopRequest.orders(user))
-            user.orders = orders
-            saveUserData()
-        } catch let error as NetworkError {
-            errorMsg = error.localizedDescription
-            showNetworkError(error)
-        } catch {
-            print(error)
-        }
-    }
-    
-    @MainActor
     func fetchReadAndOrderedBooks () async {
         do {
             let readAndOrderedBooks:ClientReportResponse = try await NetworkClient().doRequest(request: ClientRequest.report(user))
@@ -137,21 +123,22 @@ final class BooksStoreObservableObject:BaseObservableObject {
 // MARK: Read books
     @MainActor
     func toggleReadBook(book:BookModel) {
-        Task {
+        Task { [weak self] in
+            guard let self = self else { return }
             let userReadBook = ReadBooksModel(email: user.email, books: [book.id])
             do {
                 let _:EmptyResponse = try await NetworkClient().doRequest(request: ClientRequest.setReadBooks(userReadBook))
-                if readBooks.contains(where: { $0 == book}) {
-                    readBooks.removeAll(where: { $0 == book})
+                if self.readBooks.contains(where: { $0 == book}) {
+                    self.readBooks.removeAll(where: { $0 == book})
                 } else {
-                    readBooks.append(book)
+                    self.readBooks.append(book)
                 }
-                books = updateBookReadStatus(list: books, bookToUpdate: book)
-                user.readBooks = readBooks
-                saveUserData()
+                self.books = updateBookReadStatus(list: books, bookToUpdate: book)
+                self.user.readBooks = readBooks
+                self.saveUserData()
             } catch let error as NetworkError {
-                errorMsg = error.localizedDescription
-                showNetworkError(error)
+                self.errorMsg = error.localizedDescription
+                self.showNetworkError(error)
             } catch {
                 print(error)
             }
