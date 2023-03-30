@@ -10,8 +10,6 @@ import Foundation
 final class BooksStoreObservableObject:BaseObservableObject {
     @Published var searchText:String = ""
     @Published private (set) var books: Books = []
-    @Published var suggestedBooks: Books = []
-    @Published var searchedBooks: Books = []
     @Published var cartBooks: Books = []
     @Published private (set) var readBooks: Books = []
     @Published private (set) var lovedBooks: Books = []
@@ -29,8 +27,6 @@ final class BooksStoreObservableObject:BaseObservableObject {
         authors = self.persistence.fetchAuthors()
         books = getBookList(list:self.persistence.fetchBooks())
         latestBooks = self.persistence.fetchBooks(url: .latestBooksDataURL)
-        suggestedBooks = latestBooks.shuffled().suffix(3)
-        searchedBooks = latestBooks.shuffled().suffix(3)
         cartBooks = user.cartBooks ?? []
         readBooks = user.readBooks ?? []
         lovedBooks = []

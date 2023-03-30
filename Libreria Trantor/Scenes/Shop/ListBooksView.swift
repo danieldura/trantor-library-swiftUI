@@ -35,13 +35,7 @@ struct ListBooksView: View {
                 }
             }
             .navigationTitle("Books".localized)
-            .searchable(text: $vm.searchText, tokens: $vm.searchedBooks, suggestedTokens: $vm.suggestedBooks, placement: .automatic, prompt: "Search Book".localized) { token in
-                NavigationLink {
-                    BookDetailView(vm: BookDetailViewModel(book: token))
-                } label: {
-                    Text(token.title)
-                }                
-            }
+            .searchable(text: $vm.searchText)
             .toolbar {
                 NavigationLink {
                     CartView()
