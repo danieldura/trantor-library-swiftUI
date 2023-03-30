@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct AccountView: View {
     @EnvironmentObject var vm:BooksStoreObservableObject
     @EnvironmentObject var account:AccountObservableObject
@@ -15,15 +17,13 @@ struct AccountView: View {
         ScrollViewDDura(title: "My Account".localized, headerGradient: Gradient(colors:[.random,.random])) {
             VStack(alignment: .leading,spacing: 16) {
                 userInfo
-                readedBooks
+//                readedBooks
                 orderedBooks
                 ordersList
                 Button("Close session".localized, role: .destructive) {
                     account.transicion = account.transSalida
                     account.loggedOut()
                 }
-            }.onAppear {
-                
             }
         }
     }
@@ -68,9 +68,14 @@ extension AccountView {
             if let orders = vm.user.orders {
                 Text("Orders List".localized)
                     .font(.title2)
-                ForEach(orders) { order in
-                    Text("\(order.date)")
-                }
+                ForEach(orders.sorted(by: { $0.date < $1.date }))  { order in
+                    HStack {
+                        Text("\(order.date.dayMonthYaerWithTimeString)")
+                        Spacer()
+                        Image(systemName: "book")
+                        Text("\(order.books.count)")
+                    }
+                                    }
             }else {
                 Text("No orders".localized)
             }
