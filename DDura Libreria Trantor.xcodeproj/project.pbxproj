@@ -69,6 +69,7 @@
 		BBC567F029BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */; };
 		BBC567F229BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */; };
 		BBCDF4E229D47499004636CD /* ReadBooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF4E129D47499004636CD /* ReadBooksModel.swift */; };
+		BBD0FBA329D5925500470B5D /* LoadingBarUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD0FBA229D5925500470B5D /* LoadingBarUIKitView.swift */; };
 		BBD3C75B29C9D3F3009EFF4E /* EmptyAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */; };
 		BBD3C75E29C9D8A9009EFF4E /* ShopRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */; };
 		BBD3C76029C9FF21009EFF4E /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */; };
@@ -172,6 +173,7 @@
 		BBC567EF29BCA6E600F69152 /* DDura_Libreria_TrantorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITests.swift; sourceTree = "<group>"; };
 		BBC567F129BCA6E600F69152 /* DDura_Libreria_TrantorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDura_Libreria_TrantorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBCDF4E129D47499004636CD /* ReadBooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBooksModel.swift; sourceTree = "<group>"; };
+		BBD0FBA229D5925500470B5D /* LoadingBarUIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBarUIKitView.swift; sourceTree = "<group>"; };
 		BBD3C75A29C9D3F3009EFF4E /* EmptyAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyAPIResponse.swift; sourceTree = "<group>"; };
 		BBD3C75D29C9D8A9009EFF4E /* ShopRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRequest.swift; sourceTree = "<group>"; };
 		BBD3C75F29C9FF21009EFF4E /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				BB3A7D9629A50CD9009714A3 /* CartButton.swift */,
 				BB34152829A61C08007C0A65 /* ApplePayButtonComponentView.swift */,
 				BBFEE6EF29D54459001BD6CF /* ShakeAnimation.swift */,
+				BBD0FBA229D5925500470B5D /* LoadingBarUIKitView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				BB4BA601299E5CC5007095C6 /* ListBooksView.swift in Sources */,
 				BB34152529A606ED007C0A65 /* Color+Extension.swift in Sources */,
 				BBA359F029BB6B71005A2F74 /* AuthenticationRequest.swift in Sources */,
+				BBD0FBA329D5925500470B5D /* LoadingBarUIKitView.swift in Sources */,
 				BB1C24B129A79E1C00714A4C /* LoginView.swift in Sources */,
 				BBD3C75B29C9D3F3009EFF4E /* EmptyAPIResponse.swift in Sources */,
 				BB4DB78729B8C9D500D6BDD8 /* NetworkInterface.swift in Sources */,
