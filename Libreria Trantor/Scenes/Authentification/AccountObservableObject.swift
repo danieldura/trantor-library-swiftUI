@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 
@@ -41,6 +42,11 @@ final class AccountObservableObject:BaseObservableObject {
     
     @Published var authenticationState: AuthenticationState = .loggedOut
     
+    var transEntrada:AnyTransition = .asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading))
+    var transSalida:AnyTransition = .asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing))
+    
+    @Published var transicion:AnyTransition = .asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading))
+    
     var networkClient: NetworkClientProtocol
     
     init(networkClient: NetworkClientProtocol) {
@@ -70,9 +76,11 @@ final class AccountObservableObject:BaseObservableObject {
             let request = AuthenticationRequest.login(User(id: 0, email: email))
             user = try await networkClient.doRequest(request:request)
             user.isLoged = true
+            cleanLogin()
             saveUserData()
             
             self.authenticationState = .loggedIn
+            transicion = transEntrada
             screen = .userHome
             
         } catch let error as NetworkError {
@@ -83,8 +91,13 @@ final class AccountObservableObject:BaseObservableObject {
             failedAuthentication()
         }
     }
-    func failedAuthentication() {
+    private func failedAuthentication() {
         self.authenticationState = .authenticationFailed
+        showAlert = true
         user.isLoged = false
+    }
+    private func cleanLogin() {
+        showAlert = false
+        errorMsg = ""
     }
 }

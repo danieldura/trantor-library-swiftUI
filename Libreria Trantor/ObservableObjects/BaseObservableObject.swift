@@ -35,8 +35,8 @@ class BaseObservableObject: ObservableObject {
         switch error {
         case .apiError(let aPIErrorResponse):
 //            alertTitle = "error_title"
-//            alertMessage = aPIErrorResponse.reason
-//            showError = true
+            errorMsg = aPIErrorResponse.reason
+            showAlert = true
             print(aPIErrorResponse.reason)
         default:
 //            alertTitle = "error_popup_title"

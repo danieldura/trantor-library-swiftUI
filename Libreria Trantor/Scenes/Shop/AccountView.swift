@@ -19,6 +19,7 @@ struct AccountView: View {
                 orderedBooks
                 ordersList
                 Button("Close session".localized, role: .destructive) {
+                    account.transicion = account.transSalida
                     account.loggedOut()
                 }
             }.onAppear {

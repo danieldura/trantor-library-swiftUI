@@ -75,6 +75,7 @@
 		BBD75AD329D2FD520013A548 /* ClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD75AD229D2FD520013A548 /* ClientRequest.swift */; };
 		BBD75AD529D304C00013A548 /* ClientReportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD75AD429D304C00013A548 /* ClientReportResponse.swift */; };
 		BBDD00FD29B9FDC900A41F99 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */; };
+		BBFEE6F029D54459001BD6CF /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFEE6EF29D54459001BD6CF /* ShakeAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,7 @@
 		BBD75AD229D2FD520013A548 /* ClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequest.swift; sourceTree = "<group>"; };
 		BBD75AD429D304C00013A548 /* ClientReportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientReportResponse.swift; sourceTree = "<group>"; };
 		BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		BBFEE6EF29D54459001BD6CF /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 				BB3B649C29A3908F005D41CF /* ExpandableComponentView.swift */,
 				BB3A7D9629A50CD9009714A3 /* CartButton.swift */,
 				BB34152829A61C08007C0A65 /* ApplePayButtonComponentView.swift */,
+				BBFEE6EF29D54459001BD6CF /* ShakeAnimation.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				BB424B10299CFCB60061A5C3 /* OrderModel.swift in Sources */,
 				BBC193D6299E42C6006219CD /* ModelPersistence.swift in Sources */,
 				BB3B64A329A3C70B005D41CF /* String+Extension.swift in Sources */,
+				BBFEE6F029D54459001BD6CF /* ShakeAnimation.swift in Sources */,
 				BB4BA604299E5D50007095C6 /* BookCell.swift in Sources */,
 				BB1B92DC299FB657005C3BD4 /* LongTextComponentView.swift in Sources */,
 				BBCDF4E229D47499004636CD /* ReadBooksModel.swift in Sources */,

@@ -11,12 +11,18 @@ struct ContentView: View {
     @EnvironmentObject var account:AccountObservableObject
     
     var body: some View {
-        switch account.screen {
-        case .authentification:
-            LoginView()
-        case .userHome:
-            AppTabView().environmentObject(BooksStoreObservableObject())
-        }
+        Group {
+            switch account.screen {
+            case .authentification:
+                LoginView()
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+            case .userHome:
+                AppTabView()
+                    .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing)))
+                    .environmentObject(BooksStoreObservableObject())
+            }
+        }.animation(.default, value: account.screen)
+        
     }
 }
 

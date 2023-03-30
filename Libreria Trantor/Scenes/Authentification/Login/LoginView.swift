@@ -11,7 +11,7 @@ struct LoginView: View {
     @EnvironmentObject var account:AccountObservableObject
     
     @State var showLostPassword = false
-    @State var email = ""
+    @State var email:String = ""
     @State var password:String = ""
     
     var body: some View {
@@ -50,9 +50,9 @@ struct LoginView: View {
                             } label: {
                                 Text("Have you forgotten the password?".localized)
                             }
-                            
-
                         }
+                        .animation(.default, value: account.showAlert)
+                        .modifier(Shake(animatableData: CGFloat(account.showAlert ? 1 : 0)))
                     } label: {
                         Text("Trantor library entry".localized)
                             .bold()
