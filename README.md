@@ -10,13 +10,13 @@ Welcome to IOS SwiftUI App with MV arquitecture.
 - IOS 16
 - xCode 14.2
 - SwiftUI 
--- Async/await
--- ObservableObjects
+  - Async/await
+  - ObservableObjects
 
 ## Backend
 Postman: [Request, Body's, etc] 
 - https://www.postman.com/ddura7/workspace/public/collection/46924-7979f2b7-ccb4-4355-a28b-29f0b6c3290d?action=share&creator=46924
-API: https://trantorapi-acacademy.herokuapp.com/api
+- API: https://trantorapi-acacademy.herokuapp.com/api
 
 ## Arquitecture
 
