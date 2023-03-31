@@ -28,7 +28,6 @@ class DataEncryptionManager {
             let sealedBox = try AES.GCM.seal(data, using: symmetricKey)
             if let encryptedData = sealedBox.combined {
                 try saveData(encryptedData, key: key)
-                print("Save data encrypted \(key.rawValue)")
             } else {
                 throw StorageError.savingFailed
             }
@@ -48,8 +47,6 @@ class DataEncryptionManager {
             return nil
         }
         let symmetricKey = SymmetricKey(data: symmetricKeyData)
-        
-        print("Read encrypted Data \(key.rawValue)")
         do {
             let sealedBox = try AES.GCM.SealedBox(combined: data)
             let decryptedData = try AES.GCM.open(sealedBox, using: symmetricKey)
@@ -77,9 +74,7 @@ class DataEncryptionManager {
             kSecAttrAccount: key.rawValue,
             kSecClass: kSecClassGenericPassword,
         ] as CFDictionary
-        
         SecItemDelete(query)
-        print("removed \(key.rawValue) from DataEncryptionManager")
     }
     
     func cleanAll() {

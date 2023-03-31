@@ -87,7 +87,6 @@ final class AccountObservableObject:BaseObservableObject {
             self.showNetworkError(error)
             failedAuthentication()
         } catch {
-            print(error)
             failedAuthentication()
         }
     }

@@ -29,9 +29,6 @@ final class NetworkClient:NetworkClientProtocol {
                 if data.isEmpty {
                     return EmptyResponse() as! T
                 }
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("JSON recibido: \(jsonString)")
-                }
                 do {
                     let decodedData = try decodeResponse(data: data, dataType: T.self)
                     return decodedData
@@ -47,7 +44,7 @@ final class NetworkClient:NetworkClientProtocol {
                 }
             }
         } catch let error as NetworkError {
-            print(error.localizedDescription)
+            print("General error\(error)")
             throw error
         } catch {
             throw NetworkError.general(error)

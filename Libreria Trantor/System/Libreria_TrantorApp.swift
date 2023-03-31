@@ -16,7 +16,6 @@ struct Libreria_TrantorApp: App {
     @StateObject var monitorNetwork = NetworkStatus()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -29,18 +28,15 @@ struct Libreria_TrantorApp: App {
                     }
                 }
                 .animation(.default, value: monitorNetwork.status)
-                .onDisappear {
-                    print("La vista se ha cerrado, lo que podría indicar que la applicación se ha cerrado")
-                }
         }
         .onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {
             case .active:
-                print("La aplicación está activa.")
+                break
             case .inactive:
-                print("La aplicación está inactiva.")
+                break
             case .background:
-                print("La aplicación se ha puesto en segundo plano.| se ha cerrado")
+                break
             @unknown default:
                 fatalError()
             }

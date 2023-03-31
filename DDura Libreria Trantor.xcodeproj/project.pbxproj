@@ -182,6 +182,7 @@
 		BBD75AD229D2FD520013A548 /* ClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequest.swift; sourceTree = "<group>"; };
 		BBD75AD429D304C00013A548 /* ClientReportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientReportResponse.swift; sourceTree = "<group>"; };
 		BBDD00FC29B9FDC900A41F99 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		BBF5EFE929D6B79300BFBA41 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBFEE6EF29D54459001BD6CF /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +280,7 @@
 				BB424AEB299BEF460061A5C3 /* Components */,
 				BB424B11299D09680061A5C3 /* AppTabView.swift */,
 				BB424AEC299BEF9F0061A5C3 /* AppOfflineView.swift */,
+				BB24932729B65BBB007E7932 /* ContentView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -390,7 +392,7 @@
 		BBB6A2202993FAB2005C0FF4 = {
 			isa = PBXGroup;
 			children = (
-				BB24932729B65BBB007E7932 /* ContentView.swift */,
+				BBF5EFE929D6B79300BFBA41 /* README.md */,
 				BB424AE2299BC6AE0061A5C3 /* Documentation.docc */,
 				BBB6A22B2993FAB2005C0FF4 /* Libreria Trantor */,
 				BBC567EE29BCA6E600F69152 /* DDura Libreria TrantorUITests */,
