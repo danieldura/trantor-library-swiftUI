@@ -12,6 +12,9 @@ We aim to incorporate the latest iOS 16 technologies in our bookstore.
 - SwiftUI 
   - Async/await
   - ObservableObjects
+- Security
+  - Keychan
+  - Cryptokit with AES GCM (symmetric 256-bit keys)  
 
 ## Backend
 Postman: We utilize Postman for requests, body management, and other tasks.
